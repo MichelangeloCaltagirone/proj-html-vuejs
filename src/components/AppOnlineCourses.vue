@@ -9,7 +9,7 @@ import OnlineCoursesCard from './OnlineCoursesCard.vue';
                         lesson: 2,
                         students: 326,
                         price: 'Free',
-                        picPath: '#'
+                        picPath: './assets/images/course-featured-image-01-480x298.jpg'
                     },
                     {
                         name: 'Personal Finance: Finalcial Security Thinking & Principles',
@@ -56,24 +56,24 @@ import OnlineCoursesCard from './OnlineCoursesCard.vue';
 </script>
 
 <template>
-    
-    <OnlineCoursesCard v-for="((course, index) in featuredOnlineCourses)" :key="index"
-    :picPath="course.picPath"
-    :price="course.price"
-    :students="course.students"
-    
-    />
-    <ComicsCard v-for="(comic, index) in comicsBooks" :key="index"
-                :picUrl="comic.thumb"
-                :price="comic.price"
-                :title="comic.series"
-                :bookType="comic.type" />
+   <div class="bg-color">
+    <div class="container py-5"> 
+    <div class="courseList d-flex flex-wrap row-cols-2">
+        <OnlineCoursesCard v-for="(course, index) in featuredOnlineCourses" :key="index"
+        :picPath="course.picPath"
+        :price="course.price"
+        :students="course.students"
+        :lessons="course.lessons"
+        :name="course.name" />
+    </div>
+    </div>
 
-    <h1 class="text-danger"> ciao</h1>
-
-
+   </div> 
+   
 </template>
 
 <style scoped lang="scss">
- @use '../style/general.scss' as *;
+.bg-color {
+    background-color: red
+}
 </style>
