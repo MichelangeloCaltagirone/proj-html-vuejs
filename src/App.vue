@@ -1,24 +1,26 @@
 <script>
 import OnlineCourses from './components/AppOnlineCourses.vue';
- export default {
+import PageHeader from './components/PageHeader.vue';
+export default {
   data() {
     return {
 
     }
   },
   components: {
-    OnlineCourses
+    OnlineCourses,
+    PageHeader
   }
- }
+}
 
 </script>
 
 <template>
 
   <OnlineCourses />
-  
-</template> 
+
+</template>
 
 <style lang="scss">
- @use './style/general.scss' as *;
+@use './style/general.scss' as *;
 </style>
