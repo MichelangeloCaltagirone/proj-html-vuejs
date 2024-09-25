@@ -10,7 +10,20 @@ export default {
   },
   components: {
     OnlineCourses,
-    PageHeader
+    PageHeader,
+    Jumbotron,
+  },
+  data() {
+    return {
+      menuItems: [
+        { name: 'Home', link: '#' },
+        { name: 'Pages', link: '#' },
+        { name: 'Courses', link: '#' },
+        { name: 'Features', link: '#' },
+        { name: 'Blog', link: '#' },
+        { name: 'Shop', link: '#' }
+      ]
+    };
   }
 }
 
