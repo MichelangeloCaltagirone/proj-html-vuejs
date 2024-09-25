@@ -6,45 +6,45 @@ import OnlineCoursesCard from './OnlineCoursesCard.vue';
                 featuredOnlineCourses: [
                     {
                         name: 'Personal Finance: Finalcial Security Thinking & Principles',
-                        lesson: 2,
+                        lessons: 2,
                         students: 326,
                         price: 'Free',
-                        picPath: './assets/images/course-featured-image-01-480x298.jpg'
+                        picPath: 'course-featured-image-01-480x298.jpg'
                     },
                     {
-                        name: 'Personal Finance: Finalcial Security Thinking & Principles',
-                        lesson: 2,
-                        students: 326,
+                        name: 'Learning to Write as a Professional Author',
+                        lessons: 20,
+                        students: 81,
                         price: 'Free',
-                        picPath: '#'
+                        picPath: 'course-02-480x298.jpg'
                     },
                     {
-                        name: 'Personal Finance: Finalcial Security Thinking & Principles',
-                        lesson: 2,
-                        students: 326,
+                        name: 'Costumer-centric Info-Tech Strategies',
+                        lessons: 24,
+                        students: 972,
                         price: 'Free',
-                        picPath: '#'
+                        picPath: 'stock-full-hd-03-480x298.jpg'
                     },
                     {
-                        name: 'Personal Finance: Finalcial Security Thinking & Principles',
-                        lesson: 2,
-                        students: 326,
-                        price: 'Free',
-                        picPath: '#'
+                        name: 'Open Programming Courses for Everyone: Phython',
+                        lessons: 17,
+                        students: 66,
+                        price: '$19.00',
+                        picPath: 'stock-full-hd-04-480x298.jpg'
                     },
                     {
-                        name: 'Personal Finance: Finalcial Security Thinking & Principles',
-                        lesson: 2,
-                        students: 326,
+                        name: 'Accademic Listening and Note-taking',
+                        lessons: 14,
+                        students: 73,
                         price: 'Free',
-                        picPath: '#'
+                        picPath: 'stock-full-hd-05-480x298.jpg'
                     },
                     {
-                        name: 'Personal Finance: Finalcial Security Thinking & Principles',
-                        lesson: 2,
-                        students: 326,
-                        price: 'Free',
-                        picPath: '#'
+                        name: 'Master JQuery in a Short Period of Time',
+                        lessons: 6,
+                        students: 51,
+                        price: '$39.00',
+                        picPath: 'stock-full-hd-06-480x298.jpg'
                     }
                 ]
             }
@@ -57,7 +57,9 @@ import OnlineCoursesCard from './OnlineCoursesCard.vue';
 
 <template>
    <div class="bg-color">
-    <div class="container py-5"> 
+    <div class="container py-5">
+        <h5 class="text-center">STIMULATED TO LEARN?</h5>
+        <h1 class="text-center mb-5">Featured Online Courses</h1>
     <div class="courseList d-flex flex-wrap row-cols-2">
         <OnlineCoursesCard v-for="(course, index) in featuredOnlineCourses" :key="index"
         :picPath="course.picPath"
@@ -68,12 +70,14 @@ import OnlineCoursesCard from './OnlineCoursesCard.vue';
     </div>
     </div>
 
-   </div> 
+   </div>
+   
+   
    
 </template>
 
 <style scoped lang="scss">
 .bg-color {
-    background-color: red
+    background-color: #F5F7FA;
 }
 </style>

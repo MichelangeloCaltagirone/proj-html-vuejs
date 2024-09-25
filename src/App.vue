@@ -1,5 +1,7 @@
 <script>
 import OnlineCourses from './components/AppOnlineCourses.vue';
+import Jumbotron from './components/Jumbotron.vue';
+import PageHeader from './components/PageHeader.vue';
 export default {
   data() {
     return {
@@ -7,7 +9,9 @@ export default {
     }
   },
   components: {
-    OnlineCourses
+    OnlineCourses,
+    PageHeader,
+    Jumbotron
   }
 }
 
