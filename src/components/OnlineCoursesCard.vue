@@ -76,7 +76,5 @@
         /* box-shadow: 15px black; */
     }
 }
-img {
-    /* border-radius: 50%; */
-}
+
 </style>

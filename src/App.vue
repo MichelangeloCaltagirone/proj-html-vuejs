@@ -2,6 +2,8 @@
 import OnlineCourses from './components/AppOnlineCourses.vue';
 import Jumbotron from './components/Jumbotron.vue';
 import PageHeader from './components/PageHeader.vue';
+import SmartTutoringProgram from './components/SmartTutoringProgram.vue';
+
 export default {
   data() {
     return {
@@ -11,7 +13,8 @@ export default {
   components: {
     OnlineCourses,
     PageHeader,
-    Jumbotron
+    Jumbotron,
+    SmartTutoringProgram
   }
 }
 
@@ -25,6 +28,7 @@ export default {
       buttonText="Download free guide" />
   </div>
   <OnlineCourses />
+  <SmartTutoringProgram />
 
 </template>
 
