@@ -43,7 +43,7 @@
         
         <div class="row g-0">
             <div class="col-md-4 d-flex p-3">
-                <img :src="getImageUrl(picPath)" class="img-fluid" :alt='picPath'>
+                <img :src="getImageUrl(picPath)" class="img-fluid rounded-circle" :alt='picPath'>
             </div>
             <div class="col-md-8">
                 <div class="card-body">
@@ -73,9 +73,10 @@
 
     &:hover {
         background-color: white;
+        /* box-shadow: 15px black; */
     }
 }
 img {
-    border-radius: 50%;
+    /* border-radius: 50%; */
 }
 </style>

@@ -58,16 +58,22 @@ import OnlineCoursesCard from './OnlineCoursesCard.vue';
 <template>
    <div class="bg-color">
     <div class="container py-5">
-        <h5 class="text-center">STIMULATED TO LEARN?</h5>
-        <h1 class="text-center mb-5">Featured Online Courses</h1>
-    <div class="courseList d-flex flex-wrap row-cols-2">
-        <OnlineCoursesCard v-for="(course, index) in featuredOnlineCourses" :key="index"
-        :picPath="course.picPath"
-        :price="course.price"
-        :students="course.students"
-        :lessons="course.lessons"
-        :name="course.name" />
-    </div>
+
+            <h5 class="text-center">STIMULATED TO LEARN?</h5>
+            <h1 class="text-center mb-5">Featured Online Courses</h1>
+            
+        <div class="courseList d-flex flex-wrap row-cols-2">
+            <OnlineCoursesCard v-for="(course, index) in featuredOnlineCourses" :key="index"
+            :picPath="course.picPath"
+            :price="course.price"
+            :students="course.students"
+            :lessons="course.lessons"
+            :name="course.name" />
+        </div>
+        
+        <div class="d-flex justify-content-center my-4">
+            <button type="button" class="btn btn-large btn-success mx-auto">View all courses<i class="fa-solid fa-arrow-right-long"></i></button>
+        </div>
     </div>
 
    </div>
