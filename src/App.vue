@@ -1,24 +1,26 @@
 <script>
 import OnlineCourses from './components/AppOnlineCourses.vue';
- export default {
+import EnjoyableSection from './components/AppEnjoyableSection.vue';
+export default {
   data() {
     return {
 
     }
   },
   components: {
-    OnlineCourses
+    OnlineCourses,
+    EnjoyableSection
   }
- }
+}
 
 </script>
 
 <template>
 
   <OnlineCourses />
-  
-</template> 
+  <EnjoyableSection />
+</template>
 
 <style lang="scss">
- @use './style/general.scss' as *;
+@use './style/general.scss' as *;
 </style>
