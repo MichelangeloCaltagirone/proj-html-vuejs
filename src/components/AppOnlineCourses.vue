@@ -1,4 +1,5 @@
 <script>
+import OnlineCoursesCard from './OnlineCoursesCard.vue';
     export default {
         data() {
             return {
@@ -7,65 +8,72 @@
                         name: 'Personal Finance: Finalcial Security Thinking & Principles',
                         lesson: 2,
                         students: 326,
-                        price: 'Free'
+                        price: 'Free',
+                        picPath: '#'
                     },
                     {
                         name: 'Personal Finance: Finalcial Security Thinking & Principles',
                         lesson: 2,
                         students: 326,
-                        price: 'Free'
+                        price: 'Free',
+                        picPath: '#'
                     },
                     {
                         name: 'Personal Finance: Finalcial Security Thinking & Principles',
                         lesson: 2,
                         students: 326,
-                        price: 'Free'
+                        price: 'Free',
+                        picPath: '#'
                     },
                     {
                         name: 'Personal Finance: Finalcial Security Thinking & Principles',
                         lesson: 2,
                         students: 326,
-                        price: 'Free'
+                        price: 'Free',
+                        picPath: '#'
                     },
                     {
                         name: 'Personal Finance: Finalcial Security Thinking & Principles',
                         lesson: 2,
                         students: 326,
-                        price: 'Free'
+                        price: 'Free',
+                        picPath: '#'
                     },
                     {
                         name: 'Personal Finance: Finalcial Security Thinking & Principles',
                         lesson: 2,
                         students: 326,
-                        price: 'Free'
+                        price: 'Free',
+                        picPath: '#'
                     }
                 ]
             }
+        },
+        components: {
+            OnlineCoursesCard
         }
     }
 </script>
 
 <template>
     
-    <div class="container">
-        <div class="card mb-3" style="max-width: 540px;">
-  <div class="row g-0">
-    <div class="col-md-4">
-      <img src="..." class="img-fluid rounded-start" alt="...">
-    </div>
-    <div class="col-md-8">
-      <div class="card-body">
-        <h5 class="card-title">Card title</h5>
-        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-        <p class="card-text"><small class="text-body-secondary">Last updated 3 mins ago</small></p>
-      </div>
-    </div>
-  </div>
-</div>
-    </div>    
+    <OnlineCoursesCard v-for="((course, index) in featuredOnlineCourses)" :key="index"
+    :picPath="course.picPath"
+    :price="course.price"
+    :students="course.students"
+    
+    />
+    <ComicsCard v-for="(comic, index) in comicsBooks" :key="index"
+                :picUrl="comic.thumb"
+                :price="comic.price"
+                :title="comic.series"
+                :bookType="comic.type" />
+
+    <h1 class="text-danger"> ciao</h1>
+
 
 </template>
 
-<style scoped>
-
+<style scoped lang="scss">
+ @use '../style/general.scss' as *;
 </style>
