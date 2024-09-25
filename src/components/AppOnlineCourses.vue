@@ -1,9 +1,54 @@
 <script>
+    export default {
+        data() {
+            return {
+                featuredOnlineCourses: [
+                    {
+                        name: 'Personal Finance: Finalcial Security Thinking & Principles',
+                        lesson: 2,
+                        students: 326,
+                        price: 'Free'
+                    },
+                    {
+                        name: 'Personal Finance: Finalcial Security Thinking & Principles',
+                        lesson: 2,
+                        students: 326,
+                        price: 'Free'
+                    },
+                    {
+                        name: 'Personal Finance: Finalcial Security Thinking & Principles',
+                        lesson: 2,
+                        students: 326,
+                        price: 'Free'
+                    },
+                    {
+                        name: 'Personal Finance: Finalcial Security Thinking & Principles',
+                        lesson: 2,
+                        students: 326,
+                        price: 'Free'
+                    },
+                    {
+                        name: 'Personal Finance: Finalcial Security Thinking & Principles',
+                        lesson: 2,
+                        students: 326,
+                        price: 'Free'
+                    },
+                    {
+                        name: 'Personal Finance: Finalcial Security Thinking & Principles',
+                        lesson: 2,
+                        students: 326,
+                        price: 'Free'
+                    }
+                ]
+            }
+        }
+    }
 </script>
 
 <template>
 
-    <h1> Ciao sono il componente Online Courses </h1>
+
+    
 
 </template>
 
