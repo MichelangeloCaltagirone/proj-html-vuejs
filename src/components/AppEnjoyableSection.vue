@@ -6,70 +6,78 @@ export default {
             insinghts: [
                 {
                     link: " Become a Better Blogger: Content Planning",
-                    icon: "2190",
+
                 },
 
                 {
                     link: "Promoting Your Online Business on Pinterest",
-                    icon: "2190",
+
                 },
 
                 {
                     link: "Gamification and Game- Based Learning",
-                    icon: "2190",
+
                 },
 
                 {
                     link: "Designing an Online Course from Experts Perspective",
-                    icon: "2190",
+
                 },
 
                 {
                     link: "Why Online Courses Are the Future of Education",
-                    icon: "2190",
+
                 },
 
 
             ],
         }
-    },
-
+    }, methods: {
+        getImgUrl(index) {
+            return new URL(`../assets/img/img${index}.jpg`, import.meta.url).href
+        },
+    }
 }
 </script>
 
 <template>
     <section>
 
-        <div class="conatiner">
+        <div class="container py-4">
 
-
-            <div class="row">
+            <div class="row row-cols-3 gx-5">
 
                 <div class="col">
-                    <span>Enjoyable insights</span>
+                    <span class="text-secondary fs-5">Enjoyable <span class="text-bg-success">insights</span></span>
 
-                    <h3>Most Viewed Best Blogs</h3>
-                    <ul>
-                        <li v-for="item in insinghts">{{ item.link }}</li>
+                    <div class="fw-bold fs-3">Most Viewed <span class="text-success">Best Blogs</span></div>
+                    <ul class="">
+                        <li v-for="item in insinghts">
+                            <a class="fs-5 fw-bold" href="#">{{ item.icon }}
+                                <span>{{ item.link }}</span>
+                            </a>
+                        </li>
                     </ul>
                 </div>
-                <div class="col center card">
 
-                    <div class="card">
-                        <div class="fakeImg"></div>
-                        <div class="card-text"></div>
+                <div class="col" v-for="(x, index) in 2">
+                    <div class="card" style="width: 18rem;">
+                        <img :src="getImgUrl(index)" class="card-img-top" alt="team-6 classe-131">
+                        <div class="card-body">
+
+                            <p class="card-text" v-if="index == 0">"Determinazione, Unità, Eccellenza. Team 6 Classe 131
+                                apre la strada, inarrestabile!"</p>
+                            <p v-else>
+                                "Forza nel codice, guidati dalla passione. Non siamo solo bravi, siamo i migliori!"</p>
+                        </div>
                     </div>
 
-                </div>
-            </div>
-            <div class="col right">
-                <div class="card">
-                    <div class="fakeImg"></div>
-                    <div class="card-text"></div>
                 </div>
 
             </div>
         </div>
+
+
     </section>
 </template>
 
@@ -77,30 +85,33 @@ export default {
 section {
     background-color: #F5F1ED;
 
-    .container {
-        max-width: 1200px;
-        margin: 0 auto;
-
-        .row {
-            display: flex;
-            flex-direction: row;
+    ul {
+        list-style: none;
+        padding: 0%;
 
 
-            .col {
-                flex-basis: calc(100% / 3);
 
-                ul {
-                    list-style-type: none;
+        li {
+            margin: 15px 0;
+
+            a {
+                text-decoration: none;
+                color: inherit;
+
+                &:hover,
+                >*:hover {
+                    color: #198754;
+
+                }
+
+
+                &::before {
+                    content: '\2190';
                 }
             }
-
-            .card {
-                height: 250px;
-                width: 200;
-
-            }
-
         }
     }
+
+
 }
 </style>
