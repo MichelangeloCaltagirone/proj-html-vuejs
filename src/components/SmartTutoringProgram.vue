@@ -19,7 +19,7 @@
                     {
                         picPath: 'home-2-image-box-01.png',
                         title: 'Multimedia Channels',
-                        text: 'We provide study materials with various formats: video, audio, slides, doc, prints, books and applications.',
+                        text: 'We provide study materials with various formats: video, audio, slides, doc, prints, books and applications, and more',
                         url: ''
                     }
                 ]
@@ -35,19 +35,19 @@
 
 <template>
 
-    <div class="container">
+    <div class="container px-3 mb-4">
 
-        <h5 class="text-center">MAXCOACH AVAILABLE COURSES</h5>
-        <h1 class="text-center mb-5">Access Smart Tutoring Program For Benefits.</h1>
+        <h5 class="text-center mt-5">MAXCOACH AVAILABLE COURSES</h5>
+        <h1 class="text-center mb-5">Access <span>Smart Tutoring</span> Program For Benefits.</h1>
 
         <div class="d-flex justify-content-between">
         <div v-for="(feautere, index) in programBenefits" class="card" style="width: 18rem;">
 
-            <img :src="getImageUrl(feautere.picPath)" class="card-img-top" :alt="feautere.picPath">
+            <img :src="getImageUrl(feautere.picPath)" class="card-img-top img-fluid" :alt="feautere.picPath">
             <div class="card-body">
                 <h5 class="card-title">{{ feautere.title }}</h5>
                 <p class="card-text">{{ feautere.text }}</p>
-                <a href="#" class="btn btn-primary">Go somewhere</a>
+                <a href="#" class="btn">Go somewhere</a>
             </div>
         </div>
     </div>
@@ -58,4 +58,20 @@
 </template>
 
 <style scoped>
+.card {
+    border: none;
+    img {
+        height: 130px ;
+        width: 150px;
+    }
+}
+.text-center span {
+    color: #20AD96
+}
+.card-body a {
+    padding-left: 0;
+    &:hover {
+        color: #20AD96;
+    }
+}
 </style>

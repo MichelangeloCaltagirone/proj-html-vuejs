@@ -96,7 +96,6 @@
 
     &:hover {
         background-color: white;
-        /* box-shadow: 15px black; */
     }
 }
 
