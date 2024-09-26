@@ -53,10 +53,91 @@
 <script>
 export default {
   name: 'PageHeader',
-  props: {
-    menuItems: {
-      type: Array,
-      required: true
+  data() {
+    return {
+      menuItems: [
+        {
+          name: 'Home',
+          submenu: [
+            { name: 'MaxCoach Education', link: '#' },
+            { name: 'Course Portal', link: '#' },
+            { name: 'Distant Learning', link: '#' },
+            { name: 'Multimedia Pedagogy', link: '#' },
+            { name: 'Modern Schooling', link: '#' },
+            { name: 'Remote training', link: '#' },
+            { name: 'Health Coaching', link: '#' },
+            { name: 'Gym Coaching', link: '#' },
+            { name: 'Business', link: '#' },
+            { name: 'Artist', link: '#' },
+
+            { name: 'Kitchen Coach', link: '#' },
+            { name: 'Motivation', link: '#' },
+            { name: 'Dancing', link: '#' },
+            { name: 'Guitar', link: '#' },
+            { name: 'Yoga', link: '#' },
+            { name: 'Photography', link: '#' },
+            { name: 'Personal Finance', link: '#' },
+            { name: 'Sales Coaching', link: '#' },
+            { name: 'Mental Therapy', link: '#' },
+
+          ]
+        },
+        {
+          name: 'Pages',
+          submenu: [
+            { name: 'Start Here', link: '#' },
+            { name: 'Success story', link: '#' },
+            { name: 'About me', link: '#' },
+            { name: 'About us 01', link: '#' },
+            { name: 'About us 02', link: '#' },
+            { name: 'About us 03', link: '#' },
+            { name: 'Contact me', link: '#' },
+            { name: 'Contact us', link: '#' },
+            { name: 'Purchase Guide', link: '#' },
+            { name: 'Privacy Policy', link: '#' },
+            { name: 'Terms of Service', link: '#' },
+          ]
+        },
+        {
+          name: 'Courses',
+          submenu: [
+            { name: 'Courses Grid 01', link: '#' },
+            { name: 'Courses Grid 02', link: '#' },
+            { name: 'Courses Grid 03', link: '#' },
+            { name: 'Membership Levels', link: '#' },
+            { name: 'Become a Teacher', link: '#' },
+            { name: 'Profile', link: '#' },
+            { name: 'Checkout', link: '#' },
+            { name: 'Single Layout', link: '#' },
+          ],
+        },
+        {
+          name: 'Features',
+          submenu: [
+            { name: 'Events', link: '#' },
+            { name: 'Zoom Meetings', link: '#' },
+          ]
+        },
+        {
+          name: 'Blog',
+          submenu: [
+            { name: 'Blog Grid', link: '#' },
+            { name: 'Blog Masonry', link: '#' },
+            { name: 'Blog Classic', link: '#' },
+            { name: 'Blog List', link: '#' },
+          ]
+        },
+        {
+          name: 'Shop',
+          submenu: [
+            { name: 'Shop Left Sidebar', link: '#' },
+            { name: 'Shop Right Sidebar', link: '#' },
+            { name: 'Cart', link: '#' },
+            { name: 'Wishlist', link: '#' },
+            { name: 'Single Product', link: '#' },
+          ]
+        }
+      ],
     }
   }
 };

@@ -19,19 +19,12 @@
 <script>
 export default {
   name: 'Jumbotron',
-  props: {
-    title: {
-      type: String,
-      required: true
-    },
-    subtitle: {
-      type: String,
-      required: true
-    },
-    buttonText: {
-      type: String,
-      required: true
-    }
+  data() {
+    return {
+      title: 'Distant learning for further expansion',
+      subtitle: 'Learning is a life-long journey that in fact we never find the terminate stop. Stop searching, enjoy the process.',
+      buttonText: 'Download free guide',
+    };
   }
 };
 </script>
