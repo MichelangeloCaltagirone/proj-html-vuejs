@@ -16,8 +16,8 @@ export default {
     <div class="input-group mb-3">
         <button class="btn btn-primary input-group-text">Confirm identity</button>
         <div class="form-floating">
-            <input type="email" class="form-control" id="SubscribeNewsletter" placeholder="Username">
-            <label for="SubscribeNewsletter">Username</label>
+            <input type="email" class="form-control" id="SubscribeNewsletter" placeholder="Enter your email">
+            <label for="SubscribeNewsletter">Enter your email</label>
         </div>
     </div>
 </template>
