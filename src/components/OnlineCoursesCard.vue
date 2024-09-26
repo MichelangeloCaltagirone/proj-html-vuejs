@@ -65,7 +65,7 @@
     <div class="card mb-3" style="max-width: 540px;">
         
         <div class="row g-0">
-            <div class="col-md-4 d-flex p-3">
+            <div class="col-md-4 p-3">
                 <img :src="getImageUrl(picPath)" class="rounded-circle" :alt='picPath'>
             </div>
             <div class="col-md-8">
@@ -107,6 +107,12 @@ img {
     height: 150px;
     object-fit: cover;
     margin-right: 1rem;
-} 
+}
+@media screen and (max-width: 767px) {
+  img {
+    width: 80px;
+    height: 80px;
+  }
+}
 
 </style>

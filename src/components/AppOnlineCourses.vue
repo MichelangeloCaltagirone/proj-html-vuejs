@@ -62,7 +62,7 @@ import OnlineCoursesCard from './OnlineCoursesCard.vue';
             <h5 class="text-center">STIMULATED TO LEARN?</h5>
             <h1 class="text-center mb-5">Featured Online Courses</h1>
             
-        <div class="courseList d-flex flex-wrap row-cols-2">
+        <div class="courseList d-flex flex-wrap row-cols-1 row-cols-lg-2">
             <OnlineCoursesCard v-for="(course, index) in featuredOnlineCourses" :key="index"
             :picPath="course.picPath"
             :price="course.price"
@@ -96,4 +96,5 @@ import OnlineCoursesCard from './OnlineCoursesCard.vue';
 h5 {
     color: #8C89A2;
 }
+
 </style>

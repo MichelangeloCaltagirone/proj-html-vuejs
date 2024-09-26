@@ -26,7 +26,7 @@ export default {
 <template>
   <MainNavBar />
   <div>
-    <PageHeader :menuItems="menuItems" />
+    <PageHeader />
     <Jumbotron />
   </div>
   <OnlineCourses />
