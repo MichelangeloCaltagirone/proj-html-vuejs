@@ -36,7 +36,9 @@
 
               <!-- Regular link -->
               <template v-else>
-                <a class="nav-link" :href="item.link">{{ item.name }}</a>
+                <a class="nav-link" :href="item.link">
+                  <i :class="item.icon"></i> {{ item.name }}
+                </a>
               </template>
             </li>
 
@@ -142,7 +144,11 @@ export default {
             { name: 'Wishlist', link: '#' },
             { name: 'Single Product', link: '#' },
           ]
+        },
+        {
+          name: '', link: '#', icon: 'fa-regular fa-circle-user'
         }
+
       ],
     }
   }
