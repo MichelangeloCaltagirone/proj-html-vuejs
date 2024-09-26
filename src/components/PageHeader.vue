@@ -26,15 +26,25 @@
                 <ul class="dropdown-menu p-3 d-flex justify-content-between" style="width: 900px;">
                   <!-- Prima colonna di voci di menu -->
                   <div class="col-4">
-                    <li v-for="(subItem, subIndex) in item.submenu.slice(0, 6)" :key="subIndex">
-                      <a class="dropdown-item" :href="subItem.link">{{ subItem.name }}</a>
+                    <li v-for="(subItem, subIndex) in item.submenu.slice(0, 10)" :key="subIndex">
+                      <a class="dropdown-item" :href="subItem.link">{{ subItem.name }}
+                        <span v-if="subItem.label" class="badge"
+                          :class="{ 'bg-danger': subItem.label === 'Hot', 'bg-success': subItem.label === 'New' }">
+                          {{ subItem.label }}
+                        </span>
+                      </a>
                     </li>
                   </div>
 
                   <!-- Seconda colonna di voci di menu -->
                   <div class="col-4">
-                    <li v-for="(subItem, subIndex) in item.submenu.slice(6, 12)" :key="subIndex">
-                      <a class="dropdown-item" :href="subItem.link">{{ subItem.name }}</a>
+                    <li v-for="(subItem, subIndex) in item.submenu.slice(10, 19)" :key="subIndex">
+                      <a class="dropdown-item" :href="subItem.link">{{ subItem.name }}
+                        <span v-if="subItem.label" class="badge"
+                          :class="{ 'bg-danger': subItem.label === 'Hot', 'bg-success': subItem.label === 'New' }">
+                          {{ subItem.label }}
+                        </span>
+                      </a>
                     </li>
                   </div>
 
@@ -53,7 +63,13 @@
                 </a>
                 <ul class="dropdown-menu">
                   <li v-for="(subItem, subIndex) in item.submenu" :key="subIndex">
-                    <a class="dropdown-item" :href="subItem.link">{{ subItem.name }}</a>
+                    <a class="dropdown-item" :href="subItem.link">{{ subItem.name }}
+                      <!-- Mostra l'etichetta se esiste -->
+                      <span v-if="subItem.label" class="badge"
+                        :class="{ 'bg-danger': subItem.label === 'HOT', 'bg-success': subItem.label === 'NEW' }">
+                        {{ subItem.label }}
+                      </span>
+                    </a>
                   </li>
                 </ul>
               </template>
@@ -90,9 +106,9 @@ export default {
         {
           name: 'Home',
           submenu: [
-            { name: 'MaxCoach Education', link: '#' },
+            { name: 'MaxCoach Education', link: '#', label: 'Hot' },
             { name: 'Course Portal', link: '#' },
-            { name: 'Distant Learning', link: '#' },
+            { name: 'Distant Learning', link: '#', label: 'Hot' },
             { name: 'Multimedia Pedagogy', link: '#' },
             { name: 'Modern Schooling', link: '#' },
             { name: 'Remote training', link: '#' },
@@ -108,8 +124,8 @@ export default {
             { name: 'Yoga', link: '#' },
             { name: 'Photography', link: '#' },
             { name: 'Personal Finance', link: '#' },
-            { name: 'Sales Coaching', link: '#' },
-            { name: 'Mental Therapy', link: '#' },
+            { name: 'Sales Coaching', link: '#', label: 'New' },
+            { name: 'Mental Therapy', link: '#', label: 'New' },
 
           ]
         },
@@ -174,7 +190,10 @@ export default {
 
       ],
     }
-  }
+  },
+  // mounted() {
+  //   console.log(this.menuItems)
+  // }
 };
 </script>
 
@@ -248,5 +267,19 @@ export default {
 
 header {
   background-color: #fff;
+}
+
+.badge {
+  margin-left: 5px;
+  color: white;
+}
+
+/* Specifiche per i badge Hot e New */
+.bg-danger {
+  background-color: red !important;
+}
+
+.bg-success {
+  background-color: green !important;
 }
 </style>
