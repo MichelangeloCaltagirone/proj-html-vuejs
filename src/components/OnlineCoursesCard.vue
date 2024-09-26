@@ -66,7 +66,7 @@
         
         <div class="row g-0">
             <div class="col-md-4 d-flex p-3">
-                <img :src="getImageUrl(picPath)" class="img-fluid rounded-circle" :alt='picPath'>
+                <img :src="getImageUrl(picPath)" class="rounded-circle" :alt='picPath'>
             </div>
             <div class="col-md-8">
                 <div class="card-body">
@@ -105,6 +105,8 @@
 img {
     width: 150px;
     height: 150px;
+    object-fit: cover;
+    margin-right: 1rem;
 } 
 
 </style>
