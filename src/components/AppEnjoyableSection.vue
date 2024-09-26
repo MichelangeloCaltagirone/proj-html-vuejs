@@ -3,38 +3,66 @@ export default {
     data() {
         return {
 
-            insinghts: [
+            bestBlogs: [
                 {
-                    link: " Become a Better Blogger: Content Planning",
+                    name: " Become a Better Blogger: Content Planning",
+                    link: '#',
 
                 },
 
                 {
-                    link: "Promoting Your Online Business on Pinterest",
+                    name: "Promoting Your Online Business on Pinterest",
+                    link: '#',
 
                 },
 
                 {
-                    link: "Gamification and Game- Based Learning",
+                    name: "Gamification and Game- Based Learning",
+                    link: '#',
 
                 },
 
                 {
-                    link: "Designing an Online Course from Experts Perspective",
+                    name: "Designing an Online Course from Experts Perspective",
+                    link: '#',
 
                 },
 
                 {
-                    link: "Why Online Courses Are the Future of Education",
+                    name: "Why Online Courses Are the Future of Education",
+                    link: '#',
 
                 },
-
 
             ],
+
+            Blogs:
+                [
+
+                    {
+                        title: 'BUSSINES',
+                        previewText: 'Ten Benefits Of Rentals That May Change Your Perspective',
+                        link: '#',
+                        date: 'Dec 28, 2020',
+                        views: '3,459',
+
+                    },
+                    {
+                        title: 'BUSSINES',
+                        previewText: '10 Things Successful Mompreneurs Do Different',
+                        link: '#',
+                        date: 'Dec 28, 2020',
+                        views: '3,024',
+
+                    },
+
+                ],
         }
-    }, methods: {
+
+    },
+    methods: {
         getImgUrl(index) {
-            return new URL(`../assets/img/img${index}.jpg`, import.meta.url).href
+            return new URL(`../assets/InsectionSectionImages/home-personal-finance-blog-${index}.jpg`, import.meta.url).href
         },
     }
 }
@@ -52,23 +80,22 @@ export default {
 
                     <div class="fw-bold fs-3">Most Viewed <span class="text-success">Best Blogs</span></div>
                     <ul class="">
-                        <li v-for="item in insinghts">
-                            <a class="fs-5 fw-bold" href="#">{{ item.icon }}
-                                <span>{{ item.link }}</span>
+                        <li v-for="item in bestBlogs">
+                            <a class="fs-5 fw-bold" :href="item.link">{{ item.icon }}
+                                <span>{{ item.name }}</span>
                             </a>
                         </li>
                     </ul>
                 </div>
 
-                <div class="col" v-for="(x, index) in 2">
+                <div class="blog col" v-for="(blog, index) in Blogs" :key="index">
                     <div class="card" style="width: 18rem;">
-                        <img :src="getImgUrl(index)" class="card-img-top" alt="team-6 classe-131">
-                        <div class="card-body">
-
-                            <p class="card-text" v-if="index == 0">"Determinazione, Unità, Eccellenza. Team 6 Classe 131
-                                apre la strada, inarrestabile!"</p>
-                            <p v-else>
-                                "Forza nel codice, guidati dalla passione. Non siamo solo bravi, siamo i migliori!"</p>
+                        <img :src="getImgUrl(index)" class="card-img-top" alt="">
+                        <div class="card-body d-flex flex-column">
+                            <h3>{{ blog.title }}</h3>
+                            <p>{{ blog.previewText }}</p>
+                            <span>{{ blog.date }}</span>
+                            <span>{{ blog.views }} views</span>
                         </div>
                     </div>
 
