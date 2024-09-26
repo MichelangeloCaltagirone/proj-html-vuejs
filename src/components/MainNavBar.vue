@@ -10,11 +10,11 @@
 
 <template>
 
-    <ul>
-        <li>i</li>
-        <li>i</li>
-        <li>i</li>
-        <li>i</li>
+    <ul class="pe-2">
+        <li><i class="fa-solid fa-ruler-combined"></i></li>
+        <li><i class="fa-solid fa-life-ring"></i></li>
+        <li><i class="fa-solid fa-book"></i></li>
+        <li><i class="fa-solid fa-cart-shopping"></i></li>
     </ul>
 
 </template>
