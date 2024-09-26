@@ -142,7 +142,7 @@ mark{
 }
 
 #section-iframe-wrapper{
-    width: 74%;
+    width: 61%;
     margin: 0 auto;
 }
 
