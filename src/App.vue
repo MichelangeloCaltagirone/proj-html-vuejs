@@ -7,6 +7,7 @@ import SmartTutoringProgram from './components/SmartTutoringProgram.vue';
 import IframeVideos from './components/IframeVideos.vue';
 import MainNavBar from './components/MainNavBar.vue';
 import SubscribeNewsletter from './components/subscribeNewsletterSection.vue';
+import OurResults from './components/OurResults.vue';
 
 export default {
   components: {
@@ -17,7 +18,8 @@ export default {
     SmartTutoringProgram,
     IframeVideos,
     MainNavBar,
-    SubscribeNewsletter
+    SubscribeNewsletter,
+    OurResults,
   }
 }
 
@@ -32,6 +34,7 @@ export default {
   <OnlineCourses />
   <SmartTutoringProgram />
   <IframeVideos />
+  <OurResults />
   <EnjoyableSection />
   <SubscribeNewsletter />
 
