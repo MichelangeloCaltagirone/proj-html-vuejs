@@ -4,6 +4,7 @@ import Jumbotron from './components/Jumbotron.vue';
 import PageHeader from './components/PageHeader.vue';
 import EnjoyableSection from './components/AppEnjoyableSection.vue';
 import SmartTutoringProgram from './components/SmartTutoringProgram.vue';
+import IframeVideos from './components/IframeVideos.vue';
 
 export default {
   data() {
@@ -23,7 +24,8 @@ export default {
     PageHeader,
     EnjoyableSection,
     Jumbotron,
-    SmartTutoringProgram
+    SmartTutoringProgram,
+    IframeVideos
   }
 }
 
@@ -39,8 +41,11 @@ export default {
 
   </div>
   <OnlineCourses />
-  <EnjoyableSection />
   <SmartTutoringProgram />
+  <IframeVideos />
+  <EnjoyableSection />
+  
+  
 
 </template>
 
