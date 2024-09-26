@@ -7,18 +7,6 @@ import SmartTutoringProgram from './components/SmartTutoringProgram.vue';
 import IframeVideos from './components/IframeVideos.vue';
 
 export default {
-  data() {
-    return {
-      menuItems: [
-        { name: 'Home', link: '#' },
-        { name: 'Pages', link: '#' },
-        { name: 'Courses', link: '#' },
-        { name: 'Features', link: '#' },
-        { name: 'Blog', link: '#' },
-        { name: 'Shop', link: '#' },
-      ],
-    }
-  },
   components: {
     OnlineCourses,
     PageHeader,
@@ -32,20 +20,14 @@ export default {
 </script>
 
 <template>
-
-  <div>
-    <PageHeader :menuItems="menuItems" />
-    <Jumbotron title="Distant learning for further expansion"
-      subtitle="Learning is a life-long journey that in fact we never find the terminate stop. Stop searching, enjoy the process."
-      buttonText="Download free guide" />
-
-  </div>
+  <PageHeader :menuItems="menuItems" />
+  <Jumbotron />
   <OnlineCourses />
   <SmartTutoringProgram />
   <IframeVideos />
   <EnjoyableSection />
-  
-  
+
+
 
 </template>
 
