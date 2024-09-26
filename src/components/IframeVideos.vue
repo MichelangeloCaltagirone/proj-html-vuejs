@@ -141,6 +141,11 @@ mark{
     padding: 0;
 }
 
+#section-iframe-wrapper{
+    width: 61%;
+    margin: 0 auto;
+}
+
 .section-iframe-right #right-preTitle{
     margin-top: 50px;
     margin-bottom: 20px;
@@ -186,6 +191,10 @@ mark{
     color: rgb(83, 170, 150);
     border-bottom: 1px solid rgb(83, 170, 150);
     width: fit-content;
+}
+
+a{
+    text-decoration: none;
 }
 
 #right-link-wrapper a p:hover{
