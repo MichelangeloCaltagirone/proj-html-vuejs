@@ -41,8 +41,14 @@
             </li>
 
             <!-- Search bar -->
-            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-            <button class="btn btn-outline-success" type="submit">Search</button>
+            <div class="input-group">
+              <input class="form-control" type="search" placeholder="Search..." aria-label="Search">
+              <button class="btn btn-outline-success" type="submit">
+                <i class="fa-solid fa-magnifying-glass"></i>
+              </button>
+            </div>
+
+
           </ul>
         </div>
       </div>
