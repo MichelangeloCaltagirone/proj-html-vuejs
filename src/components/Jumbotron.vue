@@ -1,5 +1,5 @@
 <template>
-  <div class="jumbotron bg-light text-dark p-5">
+  <div class="jumbotron text-dark p-5">
     <div class="container">
       <div class="row align-items-center">
         <div class="col-md-6">
@@ -7,7 +7,8 @@
           <p class="lead">{{ subtitle }}</p>
           <a href="#" class="btn btn-success">
             <i class="fa-solid fa-download"></i>
-            {{ buttonText }}</a>
+            {{ buttonText }}
+          </a>
         </div>
         <div class="col-md-6">
           <img src="../assets/images/about-me-profile-ohm4dxoearqbxny7q3bq1pzbdgofdx0tobbeqcvzd0.jpg"
@@ -44,5 +45,9 @@ export default {
   padding: 10px;
   display: inline-block;
   text-align: center;
+}
+
+.jumbotron {
+  background-color: #f5f7fA;
 }
 </style>

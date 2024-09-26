@@ -1,6 +1,6 @@
 <template>
   <header>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light p-3">
+    <nav class="navbar navbar-expand-lg navbar-light p-3">
       <div class="container">
         <!-- Logo -->
         <a class="navbar-brand" href="#">
@@ -237,7 +237,6 @@ export default {
 }
 
 
-
 .dropdown:hover .dropdown-menu {
   visibility: visible;
   opacity: 1;
@@ -245,5 +244,9 @@ export default {
 
 .dropdown {
   padding: 0 15px;
+}
+
+header {
+  background-color: #fff;
 }
 </style>
