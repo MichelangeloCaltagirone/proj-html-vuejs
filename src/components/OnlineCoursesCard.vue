@@ -98,5 +98,9 @@
         background-color: white;
     }
 }
+img {
+    width: 150px;
+    height: 150px;
+} 
 
 </style>
