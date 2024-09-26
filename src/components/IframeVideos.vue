@@ -82,7 +82,7 @@ export default {
 </template>
 
 <style lang="scss" scoped>
-@use '../assets/styles/general.scss';
+
 // IFRAME 
 .iframe-wrapper{
     flex-basis: 50%;
