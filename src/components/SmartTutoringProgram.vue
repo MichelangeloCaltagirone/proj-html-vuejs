@@ -70,8 +70,10 @@
 }
 .card-body a {
     padding-left: 0;
+    color: #8C89A2;
     &:hover {
         color: #20AD96;
     }
+    
 }
 </style>

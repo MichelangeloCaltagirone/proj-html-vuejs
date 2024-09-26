@@ -86,4 +86,11 @@ import OnlineCoursesCard from './OnlineCoursesCard.vue';
 .bg-color {
     background-color: #F5F7FA;
 }
+.btn {  
+        padding: 15px 45px;
+        background-color: #20AD96;
+        color: white;
+        font-size: 12px;
+        font-weight: bold;
+    }
 </style>
