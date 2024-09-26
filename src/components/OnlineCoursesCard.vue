@@ -73,7 +73,7 @@
                     <h5 class="card-title fs-4 fw-bold">{{ price }}</h5>
                     <p class="card-text fw-bold fs-5"> {{ name }}</p>
                     <span class="card-text me-4"><small class="text-body-secondary"><i class="fa-solid fa-book"></i> {{ lessons }} lessons</small></span>
-                    <span class="card-text"><small class="text-body-secondary"><i class="fa-regular fa-user"></i> {{ students }} students</small></span>
+                    <span class="card-text"><small class="text-body-secondary"><i class="ms-2 fa-regular fa-user"></i> {{ students }} students</small></span>
                 </div>
             </div>
         </div>

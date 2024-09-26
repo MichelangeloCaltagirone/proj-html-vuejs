@@ -52,7 +52,7 @@
             <div class="card-body">
                 <h5 class="card-title mt-2">{{ feautere.title }}</h5>
                 <p class="card-text">{{ feautere.text }}</p>
-                <a href="#" class="btn">{{ feature.btnText }}<i class="fa-solid fa-arrow-right-long"></i></a>
+                <a href="#" class="btn">{{ feautere.btnText }}<i class="ms-2 fa-solid fa-arrow-right-long"></i></a>
             </div>
         </div>
     </div>
