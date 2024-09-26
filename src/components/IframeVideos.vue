@@ -141,6 +141,11 @@ mark{
     padding: 0;
 }
 
+#section-iframe-wrapper{
+    width: 74%;
+    margin: 0 auto;
+}
+
 .section-iframe-right #right-preTitle{
     margin-top: 50px;
     margin-bottom: 20px;
@@ -180,6 +185,10 @@ mark{
     color: rgb(116, 116, 116);
 }
 
+a{
+    text-decoration: none;
+}
+
 #right-link-wrapper a p{
     padding-bottom: 1px;
     font-weight: 700;
@@ -203,4 +212,5 @@ mark{
     z-index: 1001;
 }
 </style>
+
 <!-- MADE BY ANDREA GULLI -->
