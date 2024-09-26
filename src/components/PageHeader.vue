@@ -1,6 +1,6 @@
 <template>
   <header>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light p-3">
       <div class="container">
         <!-- Logo -->
         <a class="navbar-brand" href="#">
@@ -18,18 +18,42 @@
           <ul class="navbar-nav ms-auto">
             <li v-for="(item, index) in menuItems" :key="index" class="nav-item dropdown"
               :class="{ 'dropdown': item.submenu }">
-              <!-- Dropdown link -->
-              <template v-if="item.submenu">
+              <!-- Dropdown per "Home" con tre colonne -->
+              <template v-if="item.name === 'Home'">
                 <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" aria-expanded="false">
                   {{ item.name }}
                 </a>
-                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <ul class="dropdown-menu p-3 d-flex justify-content-between" style="width: 900px;">
+                  <!-- Prima colonna di voci di menu -->
+                  <div class="col-4">
+                    <li v-for="(subItem, subIndex) in item.submenu.slice(0, 6)" :key="subIndex">
+                      <a class="dropdown-item" :href="subItem.link">{{ subItem.name }}</a>
+                    </li>
+                  </div>
+
+                  <!-- Seconda colonna di voci di menu -->
+                  <div class="col-4">
+                    <li v-for="(subItem, subIndex) in item.submenu.slice(6, 12)" :key="subIndex">
+                      <a class="dropdown-item" :href="subItem.link">{{ subItem.name }}</a>
+                    </li>
+                  </div>
+
+                  <!-- Terza colonna con immagine -->
+                  <div class="col-4 d-flex align-items-center justify-content-center">
+                    <img src="../assets/images/homepages-mega-menu-image-alt.jpg" alt="Dropdown Image"
+                      class="img-fluid">
+                  </div>
+                </ul>
+              </template>
+
+              <!-- Dropdown normale per gli altri elementi -->
+              <template v-else-if="item.submenu">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" aria-expanded="false">
+                  {{ item.name }}
+                </a>
+                <ul class="dropdown-menu">
                   <li v-for="(subItem, subIndex) in item.submenu" :key="subIndex">
                     <a class="dropdown-item" :href="subItem.link">{{ subItem.name }}</a>
-                  </li>
-                  <li v-if="item.image">
-                    <img :src="item.image" alt="Dropdown Image" class="dropdown-item img-fluid"
-                      style="max-width: 100px;">
                   </li>
                 </ul>
               </template>
@@ -49,14 +73,13 @@
                 <i class="fa-solid fa-magnifying-glass"></i>
               </button>
             </div>
-
-
           </ul>
         </div>
       </div>
     </nav>
   </header>
 </template>
+
 
 <script>
 export default {
@@ -156,8 +179,56 @@ export default {
 </script>
 
 <style scoped>
+.navbar-nav .nav-link {
+  color: #000;
+  position: relative;
+  transition: color 0.5s ease;
+}
+
+.navbar-nav .nav-link:hover {
+  color: #28a745;
+}
+
+/* Linea verde sotto al link, che si riempie gradualmente */
+.navbar-nav .nav-link::before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 1px;
+  background-color: #28a745;
+  transition: width 0.5s ease;
+}
+
+/* La linea si riempie quando si fa hover */
+.navbar-nav .nav-link:hover::before {
+  width: 100%;
+}
+
+
+/* Dropdown menu inizialmente nascosto */
+.dropdown-menu {
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.5s ease;
+  border-bottom: 4px solid green;
+  /* transform: translateY(20); */
+}
+
+/* Mostra il dropdown quando la linea è completamente riempita */
+.navbar-nav .nav-link:hover::before {
+  width: 100%;
+}
+
+
+.dropdown-menu:hover .dropdown {
+  opacity: 1;
+  visibility: visible;
+}
+
 .navbar-brand img {
-  width: 120px;
+  width: 160px;
 }
 
 .navbar .dropdown:hover .dropdown-menu {
@@ -165,14 +236,14 @@ export default {
   margin-top: 0;
 }
 
-.dropdown-menu {
-  transition: opacity 0.3s ease;
-  opacity: 0;
-  visibility: hidden;
-}
+
 
 .dropdown:hover .dropdown-menu {
   visibility: visible;
   opacity: 1;
+}
+
+.dropdown {
+  padding: 0 15px;
 }
 </style>
