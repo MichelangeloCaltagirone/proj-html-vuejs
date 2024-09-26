@@ -179,8 +179,56 @@ export default {
 </script>
 
 <style scoped>
+.navbar-nav .nav-link {
+  color: #000;
+  position: relative;
+  transition: color 0.5s ease;
+}
+
+.navbar-nav .nav-link:hover {
+  color: #28a745;
+}
+
+/* Linea verde sotto al link, che si riempie gradualmente */
+.navbar-nav .nav-link::before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 1px;
+  background-color: #28a745;
+  transition: width 0.5s ease;
+}
+
+/* La linea si riempie quando si fa hover */
+.navbar-nav .nav-link:hover::before {
+  width: 100%;
+}
+
+
+/* Dropdown menu inizialmente nascosto */
+.dropdown-menu {
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.5s ease;
+  border-bottom: 4px solid green;
+  /* transform: translateY(20); */
+}
+
+/* Mostra il dropdown quando la linea è completamente riempita */
+.navbar-nav .nav-link:hover::before {
+  width: 100%;
+}
+
+
+.dropdown-menu:hover .dropdown {
+  opacity: 1;
+  visibility: visible;
+}
+
 .navbar-brand img {
-  width: 120px;
+  width: 160px;
 }
 
 .navbar .dropdown:hover .dropdown-menu {
@@ -188,17 +236,6 @@ export default {
   margin-top: 0;
 }
 
-.dropdown-menu {
-  opacity: 0;
-  transform: translateY(-10px);
-  transition: all 0.3s ease;
-  border-bottom: 4px solid green;
-}
-
-.dropdown-menu.show {
-  opacity: 1;
-  transform: translateY(0);
-}
 
 
 .dropdown:hover .dropdown-menu {
