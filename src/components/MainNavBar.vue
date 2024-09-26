@@ -22,7 +22,7 @@
 <style scoped>
 ul {
     list-style-type: none;
-    position: sticky;
+    position: absolute;
     right: 0;
     top: 45%;
     margin: 0;
