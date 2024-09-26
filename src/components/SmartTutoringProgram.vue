@@ -38,6 +38,8 @@
 
 <template>
 
+
+ 
     <div class="container px-3 mb-4">
 
         <h5 class="text-center mt-5">MAXCOACH AVAILABLE COURSES</h5>
