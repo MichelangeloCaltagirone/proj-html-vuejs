@@ -24,12 +24,10 @@ export default {
 </script>
 
 <template>
-
   <MainNavBar />
   <div>
     <PageHeader :menuItems="menuItems" />
     <Jumbotron />
-
   </div>
   <OnlineCourses />
   <SmartTutoringProgram />
