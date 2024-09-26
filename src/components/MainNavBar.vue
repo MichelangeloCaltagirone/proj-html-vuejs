@@ -22,14 +22,15 @@
 <style scoped>
 ul {
     list-style-type: none;
-    position: sticky;
+    position: absolute;
     right: 0;
     top: 45%;
     margin: 0;
-    padding: 0;
-    li {
-        flex-shrink: 1;
-    }
+    padding: 0;    
+}
+
+li {
+    flex-shrink: 1;
 }
 
 </style>
