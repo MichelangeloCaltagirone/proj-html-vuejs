@@ -3,6 +3,7 @@ import OnlineCourses from './components/AppOnlineCourses.vue';
 import Jumbotron from './components/Jumbotron.vue';
 import PageHeader from './components/PageHeader.vue';
 import EnjoyableSection from './components/AppEnjoyableSection.vue';
+import SmartTutoringProgram from './components/SmartTutoringProgram.vue';
 
 export default {
   data() {
@@ -97,9 +98,10 @@ export default {
     PageHeader,
     EnjoyableSection,
     Jumbotron,
-
-  },
+    SmartTutoringProgram
+  }
 }
+
 </script>
 
 <template>
@@ -113,6 +115,7 @@ export default {
   </div>
   <OnlineCourses />
   <EnjoyableSection />
+  <SmartTutoringProgram />
 
 </template>
 
