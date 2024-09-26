@@ -5,6 +5,7 @@ import PageHeader from './components/PageHeader.vue';
 import EnjoyableSection from './components/AppEnjoyableSection.vue';
 import SmartTutoringProgram from './components/SmartTutoringProgram.vue';
 import IframeVideos from './components/IframeVideos.vue';
+import MainNavBar from './components/MainNavBar.vue';
 
 export default {
   data() {
@@ -25,7 +26,8 @@ export default {
     EnjoyableSection,
     Jumbotron,
     SmartTutoringProgram,
-    IframeVideos
+    IframeVideos,
+    MainNavBar
   }
 }
 
@@ -33,6 +35,7 @@ export default {
 
 <template>
 
+  <MainNavBar />
   <div>
     <PageHeader :menuItems="menuItems" />
     <Jumbotron title="Distant learning for further expansion"

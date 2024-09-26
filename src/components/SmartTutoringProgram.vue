@@ -45,7 +45,7 @@
 
             <img :src="getImageUrl(feautere.picPath)" class="card-img-top img-fluid" :alt="feautere.picPath">
             <div class="card-body">
-                <h5 class="card-title">{{ feautere.title }}</h5>
+                <h5 class="card-title mt-2">{{ feautere.title }}</h5>
                 <p class="card-text">{{ feautere.text }}</p>
                 <a href="#" class="btn">Go somewhere</a>
             </div>
