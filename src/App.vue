@@ -5,6 +5,7 @@ import PageHeader from './components/PageHeader.vue';
 import EnjoyableSection from './components/AppEnjoyableSection.vue';
 import SmartTutoringProgram from './components/SmartTutoringProgram.vue';
 import IframeVideos from './components/IframeVideos.vue';
+import MainNavBar from './components/MainNavBar.vue';
 
 export default {
   components: {
@@ -13,15 +14,21 @@ export default {
     EnjoyableSection,
     Jumbotron,
     SmartTutoringProgram,
-    IframeVideos
+    IframeVideos,
+    MainNavBar
   }
 }
 
 </script>
 
 <template>
-  <PageHeader :menuItems="menuItems" />
-  <Jumbotron />
+
+  <MainNavBar />
+  <div>
+    <PageHeader :menuItems="menuItems" />
+    <Jumbotron />
+
+  </div>
   <OnlineCourses />
   <SmartTutoringProgram />
   <IframeVideos />
