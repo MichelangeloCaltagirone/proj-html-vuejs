@@ -1,31 +1,5 @@
 <script>
 export default {
-    data() {
-        return {
-            showVideo: false,
-            cover: true,
-            isVideoPlaying: false,
-        }
-    },
-    methods: {
-        playVideo() {
-            this.showVideo = true
-            this.cover = false
-            this.isVideoPlaying = true;
-
-            document.body.classList.add('video-playing-mode') // Classe per applicare uno sfondo nero e coprire tutti gli elementi nel body quando il video è i riproduzione
-            const iframe = document.querySelector('.iframe-wrapper')
-            iframe.classList.add('iframe-extend') // aggiungo la classe per estendere l'iframe una volta cliccato
-        },
-        hideVideo() {
-            this.showVideo = false
-            this.cover = true
-
-            document.body.classList.remove('video-playing-mode')
-            const iframe = document.querySelector('.iframe-wrapper')
-            iframe.classList.remove('iframe-extend') // aggiungo la classe per rimuovere l'iframe una volta cliccato          
-        },
-    },
   data() {
     return {
         showVideo: false,
@@ -108,64 +82,7 @@ export default {
 </template>
 
 <style lang="scss" scoped>
-* {
-    font-family: 'Roboto';
-}
-
-// CARD CAROUSEL
-.carousel-card {
-    margin-top: 50px;
-    width: 700px;
-    height: 350px;
-    border: 1px solid lightgray;
-    padding: 40px;
-    border-radius: 12px;
-}
-
-.carousel-card .title {
-    font-size: 20px;
-    color: #3F3A64;
-    text-align: left;
-}
-
-.carousel-card .text {
-    margin-top: 25px;
-    margin-bottom: 25px;
-    font-size: 18px;
-    font-weight: 500;
-    color: #696969;
-    white-space: pre-line;
-    text-align: left;
-}
-
-.carousel-card img {
-    height: 70px;
-    width: 70px;
-    max-width: 100%;
-    border-radius: 50%;
-}
-
-.carousel-img-content {
-    margin-left: 25px;
-    flex-direction: column;
-    align-items: start;
-    justify-content: center;
-}
-
-.carousel-card .carousel-img-content .img-title {
-    font-size: 15px;
-    color: #3F3A64;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    margin-bottom: 12px;
-}
-
-.carousel-card .carousel-img-content .img-text {
-    font-size: 14px;
-    color: #7e7e7e;
-    margin-bottom: 0;
-}
-</style>
+@use '../assets/styles/general.scss';
 // IFRAME 
 .iframe-wrapper{
     flex-basis: 50%;
@@ -225,11 +142,6 @@ mark{
     padding: 0;
 }
 
-#section-iframe-wrapper{
-    width: 61%;
-    margin: 0 auto;
-}
-
 .section-iframe-right #right-preTitle{
     margin-top: 50px;
     margin-bottom: 20px;
@@ -269,10 +181,6 @@ mark{
     color: rgb(116, 116, 116);
 }
 
-a{
-    text-decoration: none;
-}
-
 #right-link-wrapper a p{
     padding-bottom: 1px;
     font-weight: 700;
@@ -296,5 +204,4 @@ a{
     z-index: 1001;
 }
 </style>
-
 <!-- MADE BY ANDREA GULLI -->
