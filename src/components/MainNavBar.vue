@@ -19,26 +19,24 @@
 
 </template>
 
-<style>
+<style scoped>
 #MainNavBarUl {
     list-style-type: none;
     position: absolute;
     right: 0;
     top: 45%;
-    margin: 0;
-    padding: 5px;
+    margin: 0;    
     
-    background-color: white;
 
 }
 .mainNavBarLi {
    display: flex;
    align-items: center;
    justify-content: flex-end;
-   margin: 15px 0;
 
    .stickyIcon {
     font-size: 24px;
+    padding: 5px;
    }
 
     &:hover {
