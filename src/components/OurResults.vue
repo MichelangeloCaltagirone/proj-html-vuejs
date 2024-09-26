@@ -35,7 +35,7 @@ export default {
 <template>
     <div class="row row-cols-4">
 
-        <div class="col" v-for="result in OurResults">
+        <div class="col d-flex flex-column" v-for="result in OurResults">
             <h3>{{ result.name }}</h3>
             <span>{{ result.num }}</span>
             <span>{{ result.cose }}</span>
