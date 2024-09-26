@@ -8,19 +8,22 @@
                         picPath: 'home-2-image-box-01.png',
                         title: 'Costumize Preference',
                         text: 'Learners are given the right to arrange and customize their study schedule and timetable based on preferences.',
-                        url: ''
+                        url: '',
+                        btnText: 'Start here'
                     },
                     {
                         picPath: 'home-2-image-box-03.png',
                         title: 'Cloud Storage',
                         text: 'You can store online lessons via online cloud or download to your device and revise lessons on the way.',
-                        url: ''
+                        url: '',
+                        btnText: 'Get Free Quote'
                     },
                     {
                         picPath: 'home-2-image-box-01.png',
                         title: 'Multimedia Channels',
                         text: 'We provide study materials with various formats: video, audio, slides, doc, prints, books and applications, and more',
-                        url: ''
+                        url: '',
+                        btnText: 'Start here'
                     }
                 ]
             }
@@ -35,6 +38,8 @@
 
 <template>
 
+
+ 
     <div class="container px-3 mb-4">
 
         <h5 class="text-center mt-5">MAXCOACH AVAILABLE COURSES</h5>
@@ -47,7 +52,7 @@
             <div class="card-body">
                 <h5 class="card-title mt-2">{{ feautere.title }}</h5>
                 <p class="card-text">{{ feautere.text }}</p>
-                <a href="#" class="btn">Go somewhere</a>
+                <a href="#" class="btn">{{ feature.btnText }}<i class="fa-solid fa-arrow-right-long"></i></a>
             </div>
         </div>
     </div>
@@ -75,5 +80,8 @@
         color: #20AD96;
     }
     
+}
+h5 {
+    color: #8C89A2;
 }
 </style>

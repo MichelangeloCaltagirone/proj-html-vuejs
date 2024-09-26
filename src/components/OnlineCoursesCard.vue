@@ -70,8 +70,8 @@
             </div>
             <div class="col-md-8">
                 <div class="card-body">
-                    <h5 class="card-title">{{ price }}</h5>
-                    <p class="card-text"> {{ name }}</p>
+                    <h5 class="card-title fs-4 fw-bold">{{ price }}</h5>
+                    <p class="card-text fw-bold fs-5"> {{ name }}</p>
                     <span class="card-text me-4"><small class="text-body-secondary"><i class="fa-solid fa-book"></i> {{ lessons }} lessons</small></span>
                     <span class="card-text"><small class="text-body-secondary"><i class="fa-regular fa-user"></i> {{ students }} students</small></span>
                 </div>
@@ -90,8 +90,12 @@
     .card-title {
         color: #20AD96
     }
-    .card-text:hover {
-        color: #20AD96;
+    .card-text {
+        color: #3F3A64;
+        &:hover {
+            color: #20AD96;
+        }
+        
     }
 
     &:hover {
