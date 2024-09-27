@@ -24,7 +24,7 @@
                 I am free to learn at my own pace, follow my own schedule and choose the subject I want to learn from the syllabus. Great study portal for people like me.
               </p>
               <div class="custom-img-wrapper d-flex justify-content-start align-items-center">
-                <img src="../assets/img/testimonial-avata-02.jpg" alt="testimonial-avatar-01">
+                <img src="../assets/images/testimonial-avata-02.jpg" alt="testimonial-avatar-01">
                 <div class="custom-carousel-img-content d-flex">
                   <h6 class="custom-img-title">Mina Hollace</h6>
                   <p class="custom-img-text">/ Freelancer</p>
@@ -40,7 +40,7 @@
                 I need to get a certification for English proficiency and MaxCoach is my best choice. Their tutors are smart and professional when dealing with students.
               </p>
               <div class="custom-img-wrapper d-flex justify-content-start align-items-center">
-                <img src="../assets/img/testimonial-avata-01.jpg" alt="testimonial-avatar-02">
+                <img src="../assets/images/testimonial-avata-01.jpg" alt="testimonial-avatar-02">
                 <div class="custom-carousel-img-content d-flex">
                   <h6 class="custom-img-title">Madley Pondor</h6>
                   <p class="custom-img-text">/ IT Specialist</p>
@@ -56,7 +56,7 @@
                 I'm a very strict person so I require everything to be organized and neat. Then, I'll be able to make things right and shine. MaxCoach guys just got me.
               </p>
               <div class="custom-img-wrapper d-flex justify-content-start align-items-center">
-                <img src="../assets/img/testimonial-avata-03.jpg" alt="testimonial-avatar-03">
+                <img src="../assets/images/testimonial-avata-03.jpg" alt="testimonial-avatar-03">
                 <div class="custom-carousel-img-content d-flex">
                   <h6 class="custom-img-title">Florence Themes</h6>
                   <p class="custom-img-text">/ Multimedia Admin</p>
@@ -72,7 +72,7 @@
                 The team at MaxCoach is simply outstanding. They helped me achieve all my goals in a timely and professional manner. Highly recommended.
               </p>
               <div class="custom-img-wrapper d-flex justify-content-start align-items-center">
-                <img src="../assets/img/testimonial-avata-04.jpg" alt="testimonial-avatar-04">
+                <img src="../assets/images/testimonial-avata-04.jpg" alt="testimonial-avatar-04">
                 <div class="custom-carousel-img-content d-flex">
                   <h6 class="custom-img-title">John Doe</h6>
                   <p class="custom-img-text">/ CEO</p>
