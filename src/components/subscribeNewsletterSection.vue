@@ -9,16 +9,17 @@ export default {
 </script>
 
 <template>
-    <div class="conatiner py-3">
+    <div class="conatiner-fluid py-3">
 
         <div class="row row-cols-2 align-items-center">
 
             <div class="col">
 
-                <h3>Subscribe Newsletters</h3>
-                <p>Enter your email address to register to our newsletter subscription
+                <div class="fw-bold fs-1">Subscribe <span class="c-green fw-medium">Newsletters</span></div>
+                <p class="c-grey">Enter your email address to register to our newsletter subscription
                     delivered on a regular basis!</p>
             </div>
+
             <div class="col">
 
                 <div class="input-group mb-3">
@@ -34,4 +35,8 @@ export default {
     </div>
 </template>
 
-<style lang="scss" scoped></style>
+<style lang="scss" scoped>
+.c-green {
+    color: #20AD96;
+}
+</style>
