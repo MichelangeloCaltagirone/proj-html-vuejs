@@ -1,6 +1,5 @@
 <script>
 import OnlineCourses from './components/AppOnlineCourses.vue';
-import Jumbotron from './components/Jumbotron.vue';
 import PageHeader from './components/PageHeader.vue';
 import EnjoyableSection from './components/AppEnjoyableSection.vue';
 import SmartTutoringProgram from './components/SmartTutoringProgram.vue';
@@ -14,7 +13,6 @@ export default {
     OnlineCourses,
     PageHeader,
     EnjoyableSection,
-    Jumbotron,
     SmartTutoringProgram,
     IframeVideos,
     MainNavBar,
@@ -27,10 +25,9 @@ export default {
 
 <template>
   <MainNavBar />
-  <div>
-    <PageHeader />
-    <Jumbotron />
-  </div>
+
+  <PageHeader />
+
   <OnlineCourses />
   <SmartTutoringProgram />
   <IframeVideos />
