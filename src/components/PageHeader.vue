@@ -1,7 +1,7 @@
 <template>
   <header>
     <MainNavBar />
-    <nav class="navbar navbar-expand-lg navbar-light p-3">
+    <nav class="navbar navbar-expand-lg navbar-light p fixed-top bg-light">
       <div class="container">
         <!-- Logo -->
         <a class="navbar-brand" href="#">

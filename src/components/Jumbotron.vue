@@ -1,5 +1,5 @@
 <template>
-  <div class="jumbotron text-dark p-5">
+  <div class="jumbotron text-dark p-5 mt-5">
     <div class="container">
       <div class="row align-items-center">
         <div class="col-md-6">
