@@ -142,8 +142,8 @@ mark{
 }
 
 #section-iframe-wrapper{
-    width: 61%;
-    margin: 0 auto;
+    margin: 100px auto;
+    max-width: 61%;
 }
 
 .section-iframe-right #right-preTitle{
