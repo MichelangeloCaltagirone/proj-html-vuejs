@@ -95,6 +95,7 @@ export default {
 
                 <div class="blog col" v-for="(blog, index) in Blogs" :key="index">
                     <div class="card">
+                        <div class="img-wrapper"></div>
                         <img :src="getImgUrl(blog.image)" class="card-img-top" alt="">
                         <div class="card-body d-flex flex-column">
                             <h3 class="c-grey">{{ blog.title }}</h3>
@@ -115,7 +116,7 @@ export default {
             </div>
         </div>
 
-
+        <div class="fiaf ">Example</div>
     </section>
 </template>
 
@@ -143,30 +144,107 @@ section {
                 >*:hover {
                     color: #20AD96;
 
+                    .fa-arrow-right {
+                        animation: slide-in-left 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+
+                        .fa-arrow-right {
+                            animation: slide-in-right 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+                        }
+                    }
                 }
 
-            }
-
-            .col {
-
-                .card {
-                    height: 400px;
-                    width: 250px;
-                }
             }
         }
 
 
+        @keyframes slide-in-left {
+            0% {
+                transform: translateX(-1000px);
+                opacity: 0;
+            }
+
+            100% {
+                transform: translateX(0);
+                opacity: 1;
+            }
+        }
+
+
+
+        @keyframes slide-in-right {
+            0% {
+                transform: translateX(1000px);
+                opacity: 0;
+            }
+
+            100% {
+                transform: translateX(0);
+                opacity: 1;
+            }
+        }
+
+
+
+
+
+    }
+
+}
+
+
+
+
+.col {
+
+    .card {
+        max-width: 300px;
+        max-height: 450px;
+
+        &:hover {
+            .img-wrapper {
+                width: 100%;
+                overflow: hidden;
+                display: inline-block;
+                box-sizing: border-box;
+                border: 1px solid #000;
+
+
+                img {
+                    animation: scale-up-center 3s linear both {}
+
+                }
+            }
+
+
+
+            @keyframes scale-up-center {
+                0% {
+                    -webkit-transform: scale(1);
+                    transform: scale(1)
+                }
+
+                100% {
+                    -webkit-transform: scale(1.5);
+                    transform: scale(1.5)
+                }
+            }
+
+
+
+
+        }
     }
 
 
-    .c-grey {
-        color: #8C89A2;
-    }
 
-    .c-green {
-        color: #20AD96;
-    }
 
+}
+
+.c-grey {
+    color: #8C89A2;
+}
+
+.c-green {
+    color: #20AD96;
 }
 </style>

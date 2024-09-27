@@ -1,4 +1,5 @@
 <script>
+
 export default {
     data() {
         return {
@@ -25,8 +26,7 @@ export default {
                         num: 1090,
                         cose: 'Blog Posts'
                     },
-                ]
-
+                ],
         }
     }
 }
@@ -35,12 +35,12 @@ export default {
 <template>
     <section class="p-5">
 
+
         <div class="container-fluid">
             <div class="row row-cols-2 row-cols-xl-4">
 
                 <div class="col" v-for="result in OurResults">
                     <div class="wrapper">
-
                         <h2>{{ result.name }}</h2>
                         <span class="numb display-1">{{ result.num }}</span>
                         <span class="cose fs-5">{{ result.cose }}</span>
