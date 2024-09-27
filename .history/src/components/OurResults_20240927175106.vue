@@ -33,7 +33,7 @@ export default {
 </script>
 
 <template>
-    <section class="p-5">
+    <section class="p-md-5">
 
 
         <div class="container-fluid">

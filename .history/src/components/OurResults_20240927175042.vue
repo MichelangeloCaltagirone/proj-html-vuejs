@@ -37,7 +37,7 @@ export default {
 
 
         <div class="container-fluid">
-            <div class="row row-cols-sm-1 row-cols-md-5 row-cols-xl-4">
+            <div class="row row-cols-sm row-cols-md-5 row-cols-xl-4">
 
                 <div class="col" v-for="result in OurResults">
                     <div class="wrapper">
