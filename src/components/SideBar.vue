@@ -1,9 +1,26 @@
 <template>
-  <div v-if="isVisible" class="sidebar">
-    <button class="btn-close" @click="$emit('close-sidebar')">X</button>
+  <div class="sidebar" v-if="isVisible">
+    <!-- Header della Sidebar -->
+    <div class="sidebar-header">
+      <img src="../assets/images/dark-logo.png" alt="Logo" class="logo" />
+      <button class="btn-close" @mouseover="hoverClose" @mouseleave="leaveClose" @click="toggleSidebar">
+        <img src="../assets/images/close.svg" alt="Close" />
+      </button>
+    </div>
+
+    <!-- Navbar -->
     <ul class="navbar-nav">
       <li v-for="(item, index) in menuItems" :key="index" class="nav-item">
-        <a class="nav-link" :href="item.link">{{ item.name }}</a>
+        <div class="nav-link" @click="toggleDropdown(item)">
+          {{ item.name }}
+          <span class="dropdown-arrow" v-if="item.submenu">▼</span>
+        </div>
+        <ul v-if="item.isOpen" class="dropdown-menu">
+          <li v-for="(subItem, subIndex) in item.submenu" :key="subIndex" class="dropdown-item">
+            {{ subItem.name }}
+          </li>
+        </ul>
+        <hr v-if="index < menuItems.length - 1" /> <!-- Linea divisoria -->
       </li>
     </ul>
   </div>
@@ -11,15 +28,26 @@
 
 <script>
 export default {
-  name: 'Sidebar',
   props: {
-    isVisible: {
-      type: Boolean,
-      required: true,
+    menuItems: Array,
+    isVisible: Boolean,
+  },
+  data() {
+    return {
+      closeIcon: '../assets/images/close-icon.png',
+      isHovered: false,
+    };
+  },
+  methods: {
+    toggleSidebar() {
+      this.$emit('close-sidebar');
     },
-    menuItems: {
-      type: Array,
-      required: true,
+    toggleDropdown(item) {
+      // Chiude gli altri dropdown se aperti
+      this.menuItems.forEach(i => {
+        if (i !== item) i.isOpen = false; // Chiudi altri dropdown
+      });
+      item.isOpen = !item.isOpen; // Inverti lo stato del dropdown cliccato
     },
   },
 };
@@ -41,7 +69,6 @@ export default {
   background-image: url('../assets/images/mobile-bg.jpg');
   background-size: cover;
   background-position: center;
-  color: #fff;
 }
 
 .sidebar:before {
@@ -72,9 +99,64 @@ export default {
   display: block;
   transition: color 0.3s ease;
   z-index: 2;
+  color: #fff;
 }
 
-.navbar-nav .nav-item .nav-link:hover {
-  color: #007bff;
+.logo {
+  height: 30px;
+}
+
+.btn-close {
+  background: none;
+  border: none;
+  cursor: pointer;
+  transition: opacity 0.3s;
+}
+
+.btn-close img {
+  width: 30px;
+}
+
+.btn-close:hover {
+  opacity: 0.7;
+}
+
+.nav-item {
+  padding: 10px 0;
+}
+
+.navbar-nav {
+  padding: 10px 0;
+  list-style: none;
+}
+
+.nav-link {
+  color: #fff;
+  /* Colore del testo dei link */
+  text-decoration: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.dropdown-menu {
+  background-color: rgba(255, 255, 255, 0.8);
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.dropdown-item {
+  color: black;
+  padding: 5px 0;
+}
+
+hr {
+  border: 1px solid white;
+  margin: 5px 0;
+}
+
+.dropdown-arrow {
+  margin-left: 5px;
+  /* Spazio tra il nome e l'icona della freccia */
 }
 </style>
