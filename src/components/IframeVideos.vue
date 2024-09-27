@@ -96,7 +96,7 @@ export default {
 
 .iframe-extend{
     height: 475px;
-    min-width: 845px;
+    min-width: 750px;
     transition: all 0.5s ease-in-out
 }
 
@@ -159,8 +159,8 @@ mark {
     min-width: 61%
 }
 
-.right{
-    flex-grow: 0;
+.right-page{
+    margin-left: 0;
 }
 
 .section-iframe-right #right-preTitle {
