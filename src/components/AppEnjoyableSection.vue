@@ -72,19 +72,20 @@ export default {
 </script>
 
 <template>
-    <section>
+    <section class="p-5">
 
-        <div class="container py-4">
+        <div class="container-fluid py-5">
 
             <div class="row row-cols-3 gx-5">
 
                 <div class="col">
-                    <span class="text-secondary fs-5">Enjoyable <span class="text-success">insights</span></span>
+                    <div class="c-grey fs-4 mb-2">Enjoyable <span class="c-green">insights</span></div>
 
-                    <div class="fw-bold fs-3">Most Viewed <span class="text-success">Best Blogs</span></div>
-                    <ul class="">
+                    <div class="fw-bold fs-1 text-nowrap mb-5">Most Viewed <span class="c-green fw-medium fs-1">Best
+                            Blogs</span></div>
+                    <ul>
                         <li v-for="item in bestBlogs">
-                            <a class="fs-5 fw-bold" :href="item.link">
+                            <a class="fw-bold" :href="item.link">
                                 <i class="fa-solid fa-arrow-right"></i>
                                 <span>{{ item.name }}</span>
                             </a>
@@ -93,16 +94,16 @@ export default {
                 </div>
 
                 <div class="blog col" v-for="(blog, index) in Blogs" :key="index">
-                    <div class="card" style="width: 18rem;">
+                    <div class="card">
                         <img :src="getImgUrl(blog.image)" class="card-img-top" alt="">
                         <div class="card-body d-flex flex-column">
-                            <h3>{{ blog.title }}</h3>
+                            <h3 class="c-grey">{{ blog.title }}</h3>
                             <p>{{ blog.previewText }}</p>
-                            <span>
+                            <span class="c-grey">
                                 <i class="fa-regular fa-calendar"></i>
                                 {{ blog.date }}
                             </span>
-                            <span>
+                            <span class="c-grey">
                                 <i class="fa-solid fa-eye"></i>
                                 {{ blog.views }}
                             </span>
@@ -121,6 +122,7 @@ export default {
 <style lang="scss" scoped>
 section {
     background-color: #F5F1ED;
+    color: #3F3A64;
 
     ul {
         list-style: none;
@@ -134,6 +136,8 @@ section {
             a {
                 text-decoration: none;
                 color: inherit;
+                font-size: 20px;
+                line-height: 3rem;
 
                 &:hover,
                 >*:hover {
@@ -141,11 +145,28 @@ section {
 
                 }
 
+            }
 
+            .col {
+
+                .card {
+                    height: 400px;
+                    width: 250px;
+                }
             }
         }
+
+
     }
 
+
+    .c-grey {
+        color: #8C89A2;
+    }
+
+    .c-green {
+        color: #20AD96;
+    }
 
 }
 </style>
