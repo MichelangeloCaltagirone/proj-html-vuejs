@@ -94,14 +94,16 @@ export default {
     position: relative;
 }
 
-.iframe-extend {
-    max-height: 475px;
-    max-width: 845px;
+.iframe-extend{
+    height: 475px;
+    min-width: 845px;
+    transition: all 0.5s ease-in-out
 }
 
 iframe,
 img {
     width: 100%;
+    height: 100%
 }
 
 .yt-button {
