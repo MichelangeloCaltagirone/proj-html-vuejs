@@ -9,12 +9,23 @@
             <i class="fa-solid fa-download"></i>
             {{ buttonText }}
           </a>
+
+
+          <p class="d-flex align-items-center mb-0 mt-3">
+            <span class="me-2">Have question?</span>
+            <a href="#" class="btn question-link">Get Free Sample
+              <i class="ms-2 fa-solid fa-arrow-right-long"></i>
+            </a>
+          </p>
+
         </div>
+
         <div class="col-md-6">
           <img src="../assets/images/about-me-profile-ohm4dxoearqbxny7q3bq1pzbdgofdx0tobbeqcvzd0.jpg"
             alt="Jumbotron Image" class="img-fluid rounded-circle">
         </div>
       </div>
+
       <!-- Immagini in fila -->
       <div class="container mt-5">
         <div class="row text-center d-flex justify-content-between">
@@ -49,5 +60,45 @@ export default {
 
 .jumbotron {
   background-color: #f5f7fA;
+}
+
+/* Stile per il link */
+.question-link {
+  color: #28a745;
+  position: relative;
+  display: inline-block;
+  text-decoration: none;
+  transition: color 0.5s ease;
+}
+
+.question-link:before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background-color: grey;
+  transform: scaleX(1);
+  transform-origin: bottom left;
+  transition: transform 0.5s ease, background-color 0.5s ease;
+}
+
+.question-link::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: #28a745;
+  transform: scaleX(0);
+  transform-origin: bottom left;
+  transition: transform 0.5s ease, background-color 0.5s ease;
+}
+
+.question-link:hover::after {
+  transform: scaleX(1);
+  background-color: #28a745;
 }
 </style>
