@@ -42,11 +42,11 @@ export default {
 
     <div class="container px-3 mb-4">
 
-        <h5 class="text-center mt-5">MAXCOACH AVAILABLE COURSES</h5>
+        <h5 class="text-center mt-5">MAXCOACH AVAILABLE COURSES</h5> 
         <h1 class="text-center mb-5">Access <span>Smart Tutoring</span> Program For Benefits.</h1>
 
-        <div class="d-flex justify-content-between row-cols row-cols-md-3">
-            <div v-for="(feautere, index) in programBenefits" class="card" style="width: 18rem;">
+        <div class="d-flex flex-wrap justify-content-lg-between row-cols-1 row-cols-md-3">
+            <div v-for="(feautere, index) in programBenefits" class="card">
 
                 <img :src="getImageUrl(feautere.picPath)" class="card-img-top img-fluid" :alt="feautere.picPath">
                 <div class="card-body">
@@ -62,13 +62,14 @@ export default {
 
 </template>
 
+
 <style scoped>
 .card {
     border: none;
 
     img {
-        height: 130px;
-        width: 150px;
+        height: 150px;
+        width: 170px;
     }
 }
 
