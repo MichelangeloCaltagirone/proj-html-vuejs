@@ -94,3 +94,159 @@
       </div>
     </div>
   
+    <!-- SEZIONE CERTIFICATI -->
+     <div id="section-certificates-wrapper">
+        <h3>
+            Start today for getting <mark>Online Certification</mark>
+        </h3>
+        <h2>
+          You can be your own guiding star with our help!
+        </h2>
+        <div class="button-container d-flex justify-content-center">
+          <button>
+            Get started now
+          </button>
+        </div>
+     </div>
+  </template>
+  
+  <style lang="scss" scoped>
+  * {
+    font-family: 'Roboto';
+  }
+  
+  // Carousel title
+  
+  .carousel-title h3 {
+    margin-top: 115px;
+    font-size: 15px;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: #8C89A2;
+  }
+  
+  .carousel-title h2 {
+    font-weight: 34px;
+    color: #3F3A64;
+  }
+  
+  .carousel-title mark {
+    font-weight: 400;
+    color: rgb(83, 170, 151);
+    margin: 0;
+    background-color: transparent;
+  }
+  
+  // CAROUSEL
+  #customCarousel{
+    max-width: 60%;
+    margin: 0 auto;
+  }
+  
+  .carousel-inner {
+    transition: transform 0.8s ease-in-out; /* Transizione smooth */
+  }
+  
+  .custom-carousel-card {
+    margin-top: 50px;
+    width: 700px;
+    height: 350px;
+    border: 1px solid lightgray;
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Aggiunta ombra */
+  }
+  
+  .custom-carousel-card .custom-title {
+    font-size: 20px;
+    color: #3F3A64;
+    text-align: left;
+  }
+  
+  .custom-carousel-card .custom-text {
+    margin-top: 25px;
+    margin-bottom: 25px;
+    font-size: 18px;
+    font-weight: 500;
+    color: #696969;
+    white-space: pre-line;
+    text-align: left;
+  }
+  
+  .custom-carousel-card img {
+    height: 70px;
+    width: 70px;
+    max-width: 100%;
+    border-radius: 50%;
+  }
+  
+  .custom-img-wrapper {
+    display: flex;
+    align-items: center;
+  }
+  
+  .custom-carousel-img-content {
+    margin-left: 25px;
+    flex-direction: column;
+    align-items: start;
+    justify-content: center;
+  }
+  
+  .custom-carousel-img-content .custom-img-title {
+    font-size: 15px;
+    color: #3F3A64;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 12px;
+  }
+  
+  .custom-carousel-img-content .custom-img-text {
+    font-size: 14px;
+    color: #7e7e7e;
+    margin-bottom: 0;
+  }
+  
+  // SEZIONE CERTIFICATI
+  #section-certificates-wrapper{
+    margin: 60px auto;
+  }
+  
+  #section-certificates-wrapper h3{
+    margin-bottom: 0;
+    font-size: 24px;
+    font-weight: 700;
+    color: #3F3A64;
+  }
+  
+  #section-certificates-wrapper h2{
+    font-weight: 700;
+    font-size: 34px;
+    color: #3F3A64;
+  }
+  
+  #section-certificates-wrapper mark{
+    font-weight: 400;
+    color: rgb(83, 170, 151);
+    margin: 0;
+    background-color: transparent;
+  }
+  
+  #section-certificates-wrapper button{
+    margin-top: 15px;
+    min-height: 52px;
+    width: 260px;
+    background-color: rgb(83, 170, 151);
+    color: white;
+  }
+  
+  #section-certificates-wrapper button:hover{
+    cursor: pointer;
+    background-color: rgb(127, 205, 188);
+  }
+  
+  #section-certificates-wrapper button:active{
+    cursor: pointer;
+    background-color: rgb(83, 170, 151);
+  }
+  </style>
