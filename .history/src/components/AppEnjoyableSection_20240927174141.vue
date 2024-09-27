@@ -79,9 +79,9 @@ export default {
             <div class="row  gx-5">
 
                 <div class="col-md-8 col-xl-4">
-                    <div class="c-grey fs-4 mb-2">Enjoyable <span class="c-green">insights</span></div>
+                    <div class="c-grey fs-4 mb-1">Enjoyable <span class="c-green">insights</span></div>
 
-                    <div class="fw-bold fs-1 text-nowrap mb-3">Most Viewed <span class="c-green fw-medium fs-1">Best
+                    <div class="fw-bold fs-1 text-nowrap mb-5">Most Viewed <span class="c-green fw-medium fs-1">Best
                             Blogs</span></div>
                     <ul>
                         <li v-for="item in bestBlogs">
