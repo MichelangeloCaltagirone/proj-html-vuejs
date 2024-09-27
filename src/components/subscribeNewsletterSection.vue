@@ -26,7 +26,7 @@ export default {
 
                     <div class="input-group input-group-lg mb-3 ">
                         <div class="form-floating">
-                            <input type="email" class="form-control bg-grey" id="SubscribeNewsletter"
+                            <input type="email" class="form-control bg-grey border border-0" id="SubscribeNewsletter"
                                 placeholder="Enter your email">
                             <label for="SubscribeNewsletter">Enter your email</label>
                         </div>
