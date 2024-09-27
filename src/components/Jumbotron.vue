@@ -52,6 +52,16 @@ export default {
 </script>
 
 <style scoped>
+h1 {
+  font-weight: bold;
+  color: #3F3A64;
+}
+
+.lead {
+  font-weight: 400;
+  color: #696969;
+}
+
 .image-wrapper {
   padding: 10px;
   display: inline-block;
