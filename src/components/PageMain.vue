@@ -5,6 +5,7 @@ import SmartTutoringProgram from './SmartTutoringProgram.vue';
 import IframeVideos from './IframeVideos.vue';
 import SubscribeNewsletter from './subscribeNewsletterSection.vue';
 import OurResults from './OurResults.vue';
+import DynamicSliderVue from './DynamicSlider.vue';
 
     export default {
         data() {
@@ -17,6 +18,7 @@ import OurResults from './OurResults.vue';
             EnjoyableSection,
             SmartTutoringProgram,
             IframeVideos,
+            DynamicSliderVue,
             SubscribeNewsletter,
             OurResults            
         }
@@ -29,6 +31,7 @@ import OurResults from './OurResults.vue';
     <OnlineCourses />
     <SmartTutoringProgram />
     <IframeVideos />
+    <DynamicSliderVue/>
     <OurResults />
     <EnjoyableSection />
     <SubscribeNewsletter />
