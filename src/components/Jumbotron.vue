@@ -5,7 +5,7 @@
         <div class="col-md-6 order-2 order-md-1">
           <h1 class="display-4">{{ title }}</h1>
           <p class="lead">{{ subtitle }}</p>
-          <a href="#" class="btn btn-success">
+          <a href="#" class="btn btn-success purple">
             <i class="fa-solid fa-download"></i>
             {{ buttonText }}
           </a>
@@ -66,6 +66,11 @@ h1 {
   padding: 10px;
   display: inline-block;
   text-align: center;
+}
+
+
+.purple:hover {
+  background-color: #3f3a64;
 }
 
 .jumbotron {
