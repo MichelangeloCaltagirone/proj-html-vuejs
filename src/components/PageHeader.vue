@@ -8,12 +8,12 @@
         </a>
 
         <!-- Button toggle for mobile view -->
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-          aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <button class="navbar-toggler" type="button" @click="toggleSidebar" aria-controls="sidebar"
+          aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
 
-        <!-- Navbar links -->
+        <!-- Navbar links for larger screens-->
         <div class="collapse navbar-collapse" id="navbarNav">
           <ul class="navbar-nav ms-auto">
             <li v-for="(item, index) in menuItems" :key="index" class="nav-item dropdown"
@@ -94,6 +94,9 @@
       </div>
     </nav>
 
+    <!-- Sidebar component -->
+    <Sidebar :isVisible="isSidebarVisible" @close-sidebar="toggleSidebar" :menuItems="menuItems" />
+
     <!-- aggiunta jumbotron -->
     <Jumbotron />
   </header>
@@ -101,16 +104,19 @@
 
 
 <script>
-// Importa il componente Jumbotron
+// Importa il componente Jumbotron e SideBar
 import Jumbotron from './Jumbotron.vue';
+import Sidebar from './SideBar.vue';
 
 export default {
   name: 'PageHeader',
   components: {
-    Jumbotron // Registrazione del componente Jumbotron
+    Jumbotron, // Registrazione del componente Jumbotron
+    Sidebar, // Registrazione del componente SideBar
   },
   data() {
     return {
+      isSidebarVisible: false,
       menuItems: [
         {
           name: 'Home',
@@ -199,6 +205,11 @@ export default {
 
       ],
     }
+  },
+  methods: {
+    toggleSidebar() {
+      this.isSidebarVisible = !this.isSidebarVisible;
+    },
   },
   // mounted() {
   //   console.log(this.menuItems)
