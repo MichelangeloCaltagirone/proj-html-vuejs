@@ -1,3 +1,13 @@
+<script>
+export default {
+  data() {
+    return {
+      
+    }
+  }
+}
+</script>
+
 <template>
   <div class="carousel-container">
     <div class="carousel-title">
