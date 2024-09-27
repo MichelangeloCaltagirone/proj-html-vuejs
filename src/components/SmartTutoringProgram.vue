@@ -52,7 +52,7 @@ export default {
                 <div class="card-body">
                     <h5 class="card-title mt-2">{{ feautere.title }}</h5>
                     <p class="card-text">{{ feautere.text }}</p>
-                    <a href="#" class="btn">{{ feautere.btnText }}<i class="ms-2 fa-solid fa-arrow-right-long"></i></a>
+                    <a href="#" class="btn grow-link">{{ feautere.btnText }}<i class="ms-2 fa-solid fa-arrow-right-long"></i></a>
                 </div>
             </div>
         </div>
@@ -80,12 +80,12 @@ export default {
 .card-body a {
     padding-left: 0;
     color: #8C89A2;
+    position: relative;
 
     &:hover {
         color: #20AD96;
     }
 }
-
 h5 {
     color: #8C89A2;
 }
@@ -94,5 +94,21 @@ h5 {
         max-width: 150px;
         max-height: 130px;
     }
+}
+ /* Linea verde sotto al link, che si riempie gradualmente  */
+.card .grow-link::before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 1px;
+  background-color: #28a745;
+  transition: width 0.5s ease;
+}
+
+/* La linea si riempie quando si fa hover */
+.card .grow-link:hover::before {
+  width: 100%;
 }
 </style>
