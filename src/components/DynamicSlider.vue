@@ -282,4 +282,8 @@ export default {
   cursor: pointer;
   background-color: rgb(83, 170, 151);
 }
+
+.btn-success {
+  background-color: #20AD96;
+}
 </style>

@@ -73,6 +73,10 @@ h1 {
   background-color: #3f3a64;
 }
 
+.btn-success {
+  background-color: #20AD96;
+}
+
 .jumbotron {
   background-color: #f5f7fA;
 }
