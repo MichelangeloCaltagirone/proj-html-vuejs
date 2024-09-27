@@ -93,13 +93,22 @@
         </div>
       </div>
     </nav>
+
+    <!-- aggiunta jumbotron -->
+    <Jumbotron />
   </header>
 </template>
 
 
 <script>
+// Importa il componente Jumbotron
+import Jumbotron from './Jumbotron.vue';
+
 export default {
   name: 'PageHeader',
+  components: {
+    Jumbotron // Registrazione del componente Jumbotron
+  },
   data() {
     return {
       menuItems: [
