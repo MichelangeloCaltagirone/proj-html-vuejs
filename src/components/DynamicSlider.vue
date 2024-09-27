@@ -116,7 +116,6 @@
   }
   
   // Carousel title
-  
   .carousel-title h3 {
     margin-top: 115px;
     font-size: 15px;
