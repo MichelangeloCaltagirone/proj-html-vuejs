@@ -74,7 +74,7 @@ export default {
                         </div>
                         <div id="right-link-wrapper" class="w-100 d-flex justify-content-start">
                             <a href="#">
-                                <p>Download free guidebook</p>
+                                <p>Download free guidebook </p>
                             </a>
                         </div>
                     </div>
