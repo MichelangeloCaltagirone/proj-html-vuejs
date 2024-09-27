@@ -38,6 +38,21 @@ export default {
   padding: 20px;
   transition: transform 0.3s ease;
   overflow-y: auto;
+  background-image: url('../assets/images/mobile-bg.jpg');
+  background-size: cover;
+  background-position: center;
+  color: #fff;
+}
+
+.sidebar:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgb(78, 72, 110, 0.7);
+  z-index: 1;
 }
 
 .sidebar .btn-close {
@@ -47,6 +62,7 @@ export default {
   font-size: 20px;
   border: none;
   background: none;
+  z-index: 2;
 }
 
 .navbar-nav .nav-item .nav-link {
@@ -55,6 +71,7 @@ export default {
   text-decoration: none;
   display: block;
   transition: color 0.3s ease;
+  z-index: 2;
 }
 
 .navbar-nav .nav-item .nav-link:hover {
