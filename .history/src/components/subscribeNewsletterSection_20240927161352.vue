@@ -9,7 +9,7 @@ export default {
 </script>
 
 <template>
-    <section class="py-5 my-5 w-75 m-auto fs-3">
+    <section class="py-5 my-5 w-75 m-auto">
 
         <div class="container">
 
@@ -18,7 +18,7 @@ export default {
                 <div class="col text-center">
 
                     <div class="fw-bold fs-1 my-5">Subscribe <span class="c-green fw-medium">Newsletters</span></div>
-                    <p class="c-grey fs-3 text-wrap mb-5 fw-semibold">Enter your email address to register to our
+                    <p class="c-grey fs-3 text-wrap mb-5 fw-semibolde">Enter your email address to register to our
                         newsletter
                         subscription
                         delivered on a regular basis!</p>
@@ -26,14 +26,13 @@ export default {
 
                 <div class="col">
 
-                    <div class="input-group mb-3">
-                        <div class="form-floating c-grey text-center email-bar">
+                    <div class="input-group input-group-lg mb-3 ">
+                        <div class="form-floating">
                             <input type="email" class="form-control bg-grey border border-0" id="SubscribeNewsletter"
                                 placeholder="Enter your email">
                             <label for="SubscribeNewsletter">Enter your email</label>
                         </div>
-                        <button class="btn btn-lg input-group-text bg-green text-light fs-4 fw-semibold">Confirm
-                            identity</button>
+                        <button class="btn btn-lg input-group-text bg-green">Confirm identity</button>
                     </div>
                 </div>
             </div>
@@ -42,8 +41,8 @@ export default {
 </template>
 
 <style lang="scss" scoped>
-#SubscribeNewsletter {
-    height: 80px;
+section {
+    height: 10;
 }
 
 .c-green {

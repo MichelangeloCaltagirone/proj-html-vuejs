@@ -9,7 +9,7 @@ export default {
 </script>
 
 <template>
-    <section class="py-5 my-5 w-75 m-auto fs-3">
+    <section class="py-5 my-5 w-75 m-auto">
 
         <div class="container">
 
@@ -26,14 +26,13 @@ export default {
 
                 <div class="col">
 
-                    <div class="input-group mb-3">
-                        <div class="form-floating c-grey text-center email-bar">
-                            <input type="email" class="form-control bg-grey border border-0" id="SubscribeNewsletter"
+                    <div class="input-group mb-3 align-items-center">
+                        <div class="form-floating c-grey text-center">
+                            <input type="email" class="form-control bg-grey border border-0 " id="SubscribeNewsletter"
                                 placeholder="Enter your email">
                             <label for="SubscribeNewsletter">Enter your email</label>
                         </div>
-                        <button class="btn btn-lg input-group-text bg-green text-light fs-4 fw-semibold">Confirm
-                            identity</button>
+                        <button class="btn btn-lg input-group-text bg-green">Confirm identity</button>
                     </div>
                 </div>
             </div>

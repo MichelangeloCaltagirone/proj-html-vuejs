@@ -9,7 +9,7 @@ export default {
 </script>
 
 <template>
-    <section class="py-5 my-5 w-75 m-auto fs-3">
+    <section class="py-5 my-5 w-75 m-auto">
 
         <div class="container">
 

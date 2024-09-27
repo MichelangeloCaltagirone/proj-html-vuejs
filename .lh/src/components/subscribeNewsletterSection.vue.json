@@ -1,0 +1,38 @@
+{
+    "sourceFile": "src/components/subscribeNewsletterSection.vue",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 5,
+            "patches": [
+                {
+                    "date": 1727446249297,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1727446270267,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -14,9 +14,9 @@\n         <div class=\"container\">\r\n \r\n             <div class=\"row row-cols-1 align-items-center d-flex justify-content-center align-items-center\">\r\n \r\n-                <div class=\"col text-center\">\r\n+                <div class=\"col d-flex\">\r\n \r\n                     <div class=\"fw-bold fs-1 my-5\">Subscribe <span class=\"c-green fw-medium\">Newsletters</span></div>\r\n                     <p class=\"c-grey fs-3 text-wrap\">Enter your email address to register to our newsletter subscription\r\n                         delivered on a regular basis!</p>\r\n"
+                },
+                {
+                    "date": 1727446306413,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -14,9 +14,9 @@\n         <div class=\"container\">\r\n \r\n             <div class=\"row row-cols-1 align-items-center d-flex justify-content-center align-items-center\">\r\n \r\n-                <div class=\"col d-flex\">\r\n+                <div class=\"col text-center\">\r\n \r\n                     <div class=\"fw-bold fs-1 my-5\">Subscribe <span class=\"c-green fw-medium\">Newsletters</span></div>\r\n                     <p class=\"c-grey fs-3 text-wrap\">Enter your email address to register to our newsletter subscription\r\n                         delivered on a regular basis!</p>\r\n"
+                },
+                {
+                    "date": 1727446325398,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -17,9 +17,9 @@\n \r\n                 <div class=\"col text-center\">\r\n \r\n                     <div class=\"fw-bold fs-1 my-5\">Subscribe <span class=\"c-green fw-medium\">Newsletters</span></div>\r\n-                    <p class=\"c-grey fs-3 text-wrap\">Enter your email address to register to our newsletter subscription\r\n+                    <p class=\"c-grey fs-3 text-wrap mb-3\">Enter your email address to register to our newsletter subscription\r\n                         delivered on a regular basis!</p>\r\n                 </div>\r\n \r\n                 <div class=\"col\">\r\n"
+                },
+                {
+                    "date": 1727446335995,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -17,9 +17,9 @@\n \r\n                 <div class=\"col text-center\">\r\n \r\n                     <div class=\"fw-bold fs-1 my-5\">Subscribe <span class=\"c-green fw-medium\">Newsletters</span></div>\r\n-                    <p class=\"c-grey fs-3 text-wrap mb-3\">Enter your email address to register to our newsletter\r\n+                    <p class=\"c-grey fs-3 text-wrap mb-4\">Enter your email address to register to our newsletter\r\n                         subscription\r\n                         delivered on a regular basis!</p>\r\n                 </div>\r\n \r\n"
+                },
+                {
+                    "date": 1727446401396,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -46,8 +46,11 @@\n \r\n .c-green {\r\n     color: #20AD96;\r\n }\r\n+.c-grey{\r\n+    color:#696969;\r\n+}\r\n \r\n .bg-green {\r\n     background-color: #20AD96;\r\n }\r\n"
+                }
+            ],
+            "date": 1727446249297,
+            "name": "Commit-0",
+            "content": "<script>\r\nexport default {\r\n    data() {\r\n        return {\r\n\r\n        }\r\n    }\r\n}\r\n</script>\r\n\r\n<template>\r\n    <section class=\"py-5 my-5 w-75 m-auto\">\r\n\r\n        <div class=\"container\">\r\n\r\n            <div class=\"row row-cols-1 align-items-center d-flex justify-content-center align-items-center\">\r\n\r\n                <div class=\"col text-center\">\r\n\r\n                    <div class=\"fw-bold fs-1 my-5\">Subscribe <span class=\"c-green fw-medium\">Newsletters</span></div>\r\n                    <p class=\"c-grey fs-3 text-wrap\">Enter your email address to register to our newsletter subscription\r\n                        delivered on a regular basis!</p>\r\n                </div>\r\n\r\n                <div class=\"col\">\r\n\r\n                    <div class=\"input-group input-group-lg mb-3 \">\r\n                        <div class=\"form-floating\">\r\n                            <input type=\"email\" class=\"form-control bg-grey border border-0\" id=\"SubscribeNewsletter\"\r\n                                placeholder=\"Enter your email\">\r\n                            <label for=\"SubscribeNewsletter\">Enter your email</label>\r\n                        </div>\r\n                        <button class=\"btn btn-lg input-group-text bg-green\">Confirm identity</button>\r\n                    </div>\r\n                </div>\r\n            </div>\r\n        </div>\r\n    </section>\r\n</template>\r\n\r\n<style lang=\"scss\" scoped>\r\nsection {\r\n    height: 10;\r\n}\r\n\r\n.c-green {\r\n    color: #20AD96;\r\n}\r\n\r\n.bg-green {\r\n    background-color: #20AD96;\r\n}\r\n\r\n.bg-grey {\r\n    background-color: #F8F8F8;\r\n}\r\n</style>"
+        }
+    ]
+}

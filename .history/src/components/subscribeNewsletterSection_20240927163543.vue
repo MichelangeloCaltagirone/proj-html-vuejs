@@ -9,7 +9,7 @@ export default {
 </script>
 
 <template>
-    <section class="py-5 my-5 w-75 m-auto fs-3">
+    <section class="py-5 my-5 w-75 m-auto">
 
         <div class="container">
 
@@ -28,7 +28,7 @@ export default {
 
                     <div class="input-group mb-3">
                         <div class="form-floating c-grey text-center email-bar">
-                            <input type="email" class="form-control bg-grey border border-0" id="SubscribeNewsletter"
+                            <input type="email" class="form-control bg-grey border border-0 h" id="SubscribeNewsletter"
                                 placeholder="Enter your email">
                             <label for="SubscribeNewsletter">Enter your email</label>
                         </div>
@@ -42,7 +42,7 @@ export default {
 </template>
 
 <style lang="scss" scoped>
-#SubscribeNewsletter {
+.eamil-bar {
     height: 80px;
 }
 
