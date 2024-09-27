@@ -62,13 +62,13 @@
 
 <div class="container">
 
-    <div class="card mb-3" style="max-width: 540px;">
+    <div class="card mb-3">
         
-        <div class="row g-0">
-            <div class="col-md-4 p-3">
+        <div class="row py-1 g-0">
+            <div class="col-4 p-lg-2">
                 <img :src="getImageUrl(picPath)" class="rounded-circle" :alt='picPath'>
             </div>
-            <div class="col-md-8">
+            <div class="col-8">
                 <div class="card-body">
                     <h5 class="card-title fs-4 fw-bold">{{ price }}</h5>
                     <p class="card-text fw-bold fs-5"> {{ name }}</p>
@@ -110,9 +110,17 @@ img {
 }
 @media screen and (max-width: 767px) {
   img {
-    width: 80px;
-    height: 80px;
+    width: 95px;
+    height: 95px;
   }
+}
+@media screen and (max-width: 991px) {
+    .col-4 {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    
 }
 
 </style>

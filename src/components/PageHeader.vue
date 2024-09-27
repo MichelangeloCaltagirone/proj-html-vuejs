@@ -1,6 +1,7 @@
 <template>
   <header>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light p-3">
+    <MainNavBar />
+    <nav class="navbar navbar-expand-lg navbar-light p fixed-top bg-light">
       <div class="container">
         <!-- Logo -->
         <a class="navbar-brand" href="#">
@@ -8,12 +9,12 @@
         </a>
 
         <!-- Button toggle for mobile view -->
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-          aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <button class="navbar-toggler" type="button" @click="toggleSidebar" aria-controls="sidebar"
+          aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
 
-        <!-- Navbar links -->
+        <!-- Navbar links for larger screens-->
         <div class="collapse navbar-collapse" id="navbarNav">
           <ul class="navbar-nav ms-auto">
             <li v-for="(item, index) in menuItems" :key="index" class="nav-item dropdown"
@@ -26,15 +27,25 @@
                 <ul class="dropdown-menu p-3 d-flex justify-content-between" style="width: 900px;">
                   <!-- Prima colonna di voci di menu -->
                   <div class="col-4">
-                    <li v-for="(subItem, subIndex) in item.submenu.slice(0, 6)" :key="subIndex">
-                      <a class="dropdown-item" :href="subItem.link">{{ subItem.name }}</a>
+                    <li v-for="(subItem, subIndex) in item.submenu.slice(0, 10)" :key="subIndex">
+                      <a class="dropdown-item" :href="subItem.link">{{ subItem.name }}
+                        <span v-if="subItem.label" class="badge"
+                          :class="{ 'bg-danger': subItem.label === 'Hot', 'bg-success': subItem.label === 'New' }">
+                          {{ subItem.label }}
+                        </span>
+                      </a>
                     </li>
                   </div>
 
                   <!-- Seconda colonna di voci di menu -->
                   <div class="col-4">
-                    <li v-for="(subItem, subIndex) in item.submenu.slice(6, 12)" :key="subIndex">
-                      <a class="dropdown-item" :href="subItem.link">{{ subItem.name }}</a>
+                    <li v-for="(subItem, subIndex) in item.submenu.slice(10, 19)" :key="subIndex">
+                      <a class="dropdown-item" :href="subItem.link">{{ subItem.name }}
+                        <span v-if="subItem.label" class="badge"
+                          :class="{ 'bg-danger': subItem.label === 'Hot', 'bg-success': subItem.label === 'New' }">
+                          {{ subItem.label }}
+                        </span>
+                      </a>
                     </li>
                   </div>
 
@@ -53,7 +64,13 @@
                 </a>
                 <ul class="dropdown-menu">
                   <li v-for="(subItem, subIndex) in item.submenu" :key="subIndex">
-                    <a class="dropdown-item" :href="subItem.link">{{ subItem.name }}</a>
+                    <a class="dropdown-item" :href="subItem.link">{{ subItem.name }}
+                      <!-- Mostra l'etichetta se esiste -->
+                      <span v-if="subItem.label" class="badge"
+                        :class="{ 'bg-danger': subItem.label === 'HOT', 'bg-success': subItem.label === 'NEW' }">
+                        {{ subItem.label }}
+                      </span>
+                    </a>
                   </li>
                 </ul>
               </template>
@@ -77,22 +94,39 @@
         </div>
       </div>
     </nav>
+
+    <!-- Sidebar component -->
+    <Sidebar :isVisible="isSidebarVisible" @close-sidebar="toggleSidebar" :menuItems="menuItems" />
+
+    <!-- aggiunta jumbotron -->
+    <Jumbotron />
   </header>
 </template>
 
 
 <script>
+// Importa il componente Jumbotron e SideBar
+import Jumbotron from './Jumbotron.vue';
+import Sidebar from './SideBar.vue';
+import MainNavBar from './MainNavBar.vue';
+
 export default {
   name: 'PageHeader',
+  components: {
+    Jumbotron, // Registrazione del componente Jumbotron
+    Sidebar, // Registrazione del componente SideBar
+    MainNavBar // Registrazione del componente MainNavBar
+  },
   data() {
     return {
+      isSidebarVisible: false,
       menuItems: [
         {
           name: 'Home',
           submenu: [
-            { name: 'MaxCoach Education', link: '#' },
+            { name: 'MaxCoach Education', link: '#', label: 'Hot' },
             { name: 'Course Portal', link: '#' },
-            { name: 'Distant Learning', link: '#' },
+            { name: 'Distant Learning', link: '#', label: 'Hot' },
             { name: 'Multimedia Pedagogy', link: '#' },
             { name: 'Modern Schooling', link: '#' },
             { name: 'Remote training', link: '#' },
@@ -108,8 +142,8 @@ export default {
             { name: 'Yoga', link: '#' },
             { name: 'Photography', link: '#' },
             { name: 'Personal Finance', link: '#' },
-            { name: 'Sales Coaching', link: '#' },
-            { name: 'Mental Therapy', link: '#' },
+            { name: 'Sales Coaching', link: '#', label: 'New' },
+            { name: 'Mental Therapy', link: '#', label: 'New' },
 
           ]
         },
@@ -174,7 +208,15 @@ export default {
 
       ],
     }
-  }
+  },
+  methods: {
+    toggleSidebar() {
+      this.isSidebarVisible = !this.isSidebarVisible;
+    },
+  },
+  // mounted() {
+  //   console.log(this.menuItems)
+  // }
 };
 </script>
 
@@ -237,7 +279,6 @@ export default {
 }
 
 
-
 .dropdown:hover .dropdown-menu {
   visibility: visible;
   opacity: 1;
@@ -245,5 +286,23 @@ export default {
 
 .dropdown {
   padding: 0 15px;
+}
+
+header {
+  background-color: #fff;
+}
+
+.badge {
+  margin-left: 5px;
+  color: white;
+}
+
+/* Specifiche per i badge Hot e New */
+.bg-danger {
+  background-color: red !important;
+}
+
+.bg-success {
+  background-color: green !important;
 }
 </style>

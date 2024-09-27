@@ -1,11 +1,11 @@
 <script>
-    export default {
-        data() {
-            return {
+export default {
+    data() {
+        return {
 
-            }
         }
     }
+}
 </script>
 
 <template>
@@ -22,7 +22,7 @@
 <style scoped>
 #MainNavBarUl {
     list-style-type: none;
-    position: absolute;
+    position: fixed;
     right: 0;
     top: 45%;
     margin: 0;    
@@ -44,6 +44,8 @@
             display: inline;
         }
     }
+    margin: 0;
+    padding: 0;
 }
 
 .hoverInfoSticky {
@@ -56,5 +58,4 @@
     display: none;
     margin-right: 10px;
 }
-
 </style>
