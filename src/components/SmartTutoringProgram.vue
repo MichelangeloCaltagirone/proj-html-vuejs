@@ -45,8 +45,8 @@
         <h5 class="text-center mt-5">MAXCOACH AVAILABLE COURSES</h5>
         <h1 class="text-center mb-5">Access <span>Smart Tutoring</span> Program For Benefits.</h1>
 
-        <div class="d-flex flex-wrap row-cols-1 row-cols-lg-2">
-        <div v-for="(feautere, index) in programBenefits" class="card" style="width: 18rem;">
+        <div class="d-flex flex-wrap justify-content-lg-between row-cols-1 row-cols-md-3">
+        <div v-for="(feautere, index) in programBenefits" class="card">
 
             <img :src="getImageUrl(feautere.picPath)" class="card-img-top img-fluid" :alt="feautere.picPath">
             <div class="card-body">
@@ -66,10 +66,10 @@
 .card {
     border: none;
     img {
-        height: 130px ;
-        width: 150px;
+        max-height: 150px ;
+        max-width: 170px;
     }
-}
+} 
 .text-center span {
     color: #20AD96
 }
@@ -82,5 +82,11 @@
 }
 h5 {
     color: #8C89A2;
+}
+@media screen and (max-width: 767px) {
+    .card img {
+        max-width: 150px;
+        max-height: 130px;
+    }
 }
 </style>
