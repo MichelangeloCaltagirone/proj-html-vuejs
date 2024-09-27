@@ -9,34 +9,49 @@ export default {
 </script>
 
 <template>
-    <div class="conatiner-fluid py-3">
+    <section class="py-5 my-5 w-75 m-auto">
 
-        <div class="row row-cols-2 align-items-center">
+        <div class="container">
 
-            <div class="col">
+            <div class="row row-cols-1 align-items-center d-flex justify-content-center align-items-center">
 
-                <div class="fw-bold fs-1">Subscribe <span class="c-green fw-medium">Newsletters</span></div>
-                <p class="c-grey">Enter your email address to register to our newsletter subscription
-                    delivered on a regular basis!</p>
-            </div>
+                <div class="col">
 
-            <div class="col">
+                    <div class="fw-bold fs-1 my-5">Subscribe <span class="c-green fw-medium">Newsletters</span></div>
+                    <p class="c-grey fs-3 text-wrap">Enter your email address to register to our newsletter subscription
+                        delivered on a regular basis!</p>
+                </div>
 
-                <div class="input-group mb-3">
-                    <button class="btn btn-primary input-group-text">Confirm identity</button>
-                    <div class="form-floating">
-                        <input type="email" class="form-control" id="SubscribeNewsletter"
-                            placeholder="Enter your email">
-                        <label for="SubscribeNewsletter">Enter your email</label>
+                <div class="col">
+
+                    <div class="input-group input-group-lg mb-3 ">
+                        <div class="form-floating">
+                            <input type="email" class="form-control bg-grey" id="SubscribeNewsletter"
+                                placeholder="Enter your email">
+                            <label for="SubscribeNewsletter">Enter your email</label>
+                        </div>
+                        <button class="btn btn-lg input-group-text bg-green">Confirm identity</button>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
+    </section>
 </template>
 
 <style lang="scss" scoped>
+section {
+    height: 10;
+}
+
 .c-green {
     color: #20AD96;
+}
+
+.bg-green {
+    background-color: #20AD96;
+}
+
+.bg-grey {
+    background-color: #F8F8F8;
 }
 </style>
