@@ -65,10 +65,10 @@
     <div class="card mb-3" style="max-width: 540px;">
         
         <div class="row g-0">
-            <div class="col-md-4 p-3">
+            <div class="col-4 p-3">
                 <img :src="getImageUrl(picPath)" class="rounded-circle" :alt='picPath'>
             </div>
-            <div class="col-md-8">
+            <div class="col-8">
                 <div class="card-body">
                     <h5 class="card-title fs-4 fw-bold">{{ price }}</h5>
                     <p class="card-text fw-bold fs-5"> {{ name }}</p>
