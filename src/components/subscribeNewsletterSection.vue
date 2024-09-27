@@ -9,21 +9,21 @@ export default {
 </script>
 
 <template>
-    <<<<<<< HEAD <section class="py-5 my-5 m-auto text-center">
-        =======
+   <section class="py-5 my-5 m-auto text-center">
+
         <section class="py-5 my-5 w-75 m-auto fs-3">
-            >>>>>>> Subscribe-Newsletter-Section
+           
 
             <div class="container">
 
                 <div class="row justify-content-center align-items-center">
 
-                    <<<<<<< HEAD <div class="col-lg-8 mb-4">
+                    <div class="col-lg-8 mb-4">
                         <h2 class="fw-bold fs-1 my-4">Subscribe to <span class="c-green fw-medium">Newsletters</span>
                         </h2>
                         <p class="c-grey fs-5">Enter your email address to register for our newsletter, delivered on a
                             regular basis!</p>
-                </div>
+                     </div>
 
                 <div class="col-lg-5">
                     <div class="input-group input-group-lg mb-3">
@@ -33,7 +33,7 @@ export default {
                             <label for="SubscribeNewsletter">Enter your email</label>
                         </div>
                         <button class="btn btn-lg input-group-text bg-green text-white">Subscribe</button>
-                        =======
+                    
                         <div class="col text-center">
 
                             <div class="fw-bold fs-1 my-5">Subscribe <span class="c-green fw-medium">Newsletters</span>
@@ -55,14 +55,16 @@ export default {
                                 </div>
                                 <button class="btn btn-lg input-group-text bg-green text-light fs-4 fw-semibold">Confirm
                                     identity</button>
-                                >>>>>>> Subscribe-Newsletter-Section
                             </div>
                         </div>
                     </div>
 
                 </div>
+            </div>
+            </div>
 
         </section>
+   </section>
 </template>
 
 <style lang="scss" scoped>
