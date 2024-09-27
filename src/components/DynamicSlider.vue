@@ -2,7 +2,7 @@
 export default {
   data() {
     return {
-      
+
     }
   }
 }
@@ -14,12 +14,13 @@ export default {
       <h3 style="font-size: 15px">Great words about MaxCoach</h3>
       <h2 style="font-size:34px">Our <mark>top learners'</mark>verbatim</h2>
     </div>
-    
+
     <!-- Carosello con 4 slide -->
     <div id="customCarousel" class="carousel slide" data-bs-ride="carousel">
       <!-- Indicatori per ciascuna slide -->
       <div class="carousel-indicators">
-        <button type="button" data-bs-target="#customCarousel" data-bs-slide-to="0" class="active" aria-current="true"></button>
+        <button type="button" data-bs-target="#customCarousel" data-bs-slide-to="0" class="active"
+          aria-current="true"></button>
         <button type="button" data-bs-target="#customCarousel" data-bs-slide-to="1"></button>
         <button type="button" data-bs-target="#customCarousel" data-bs-slide-to="2"></button>
         <button type="button" data-bs-target="#customCarousel" data-bs-slide-to="3"></button>
@@ -31,7 +32,8 @@ export default {
           <div class="custom-carousel-card">
             <h4 class="custom-title">High level of efficiency and scientific teaching methods</h4>
             <p class="custom-text">
-              I am free to learn at my own pace, follow my own schedule and choose the subject I want to learn from the syllabus. Great study portal for people like me.
+              I am free to learn at my own pace, follow my own schedule and choose the subject I want to learn from the
+              syllabus. Great study portal for people like me.
             </p>
             <div class="custom-img-wrapper d-flex justify-content-start align-items-center">
               <img src="../assets/images/testimonial-avata-02.jpg" alt="testimonial-avatar-01">
@@ -47,7 +49,8 @@ export default {
           <div class="custom-carousel-card">
             <h4 class="custom-title">Professional team of specialists and passionate mentors at reach</h4>
             <p class="custom-text">
-              I need to get a certification for English proficiency and MaxCoach is my best choice. Their tutors are smart and professional when dealing with students.
+              I need to get a certification for English proficiency and MaxCoach is my best choice. Their tutors are
+              smart and professional when dealing with students.
             </p>
             <div class="custom-img-wrapper d-flex justify-content-start align-items-center">
               <img src="../assets/images/testimonial-avata-01.jpg" alt="testimonial-avatar-02">
@@ -63,7 +66,8 @@ export default {
           <div class="custom-carousel-card">
             <h4 class="custom-title">It's a choice of quality for people with special needs</h4>
             <p class="custom-text">
-              I'm a very strict person so I require everything to be organized and neat. Then, I'll be able to make things right and shine. MaxCoach guys just got me.
+              I'm a very strict person so I require everything to be organized and neat. Then, I'll be able to make
+              things right and shine. MaxCoach guys just got me.
             </p>
             <div class="custom-img-wrapper d-flex justify-content-start align-items-center">
               <img src="../assets/images/testimonial-avata-03.jpg" alt="testimonial-avatar-03">
@@ -79,7 +83,8 @@ export default {
           <div class="custom-carousel-card">
             <h4 class="custom-title">I am proud of MaxCoach</h4>
             <p class="custom-text">
-              The team at MaxCoach is simply outstanding. They helped me achieve all my goals in a timely and professional manner. Highly recommended.
+              The team at MaxCoach is simply outstanding. They helped me achieve all my goals in a timely and
+              professional manner. Highly recommended.
             </p>
             <div class="custom-img-wrapper d-flex justify-content-start align-items-center">
               <img src="../assets/images/testimonial-avata-04.jpg" alt="testimonial-avatar-04">
@@ -105,19 +110,19 @@ export default {
   </div>
 
   <!-- SEZIONE CERTIFICATI -->
-   <div id="section-certificates-wrapper">
-      <h3 class="text-center">
-          Start today for getting <mark>Online Certification</mark>
-      </h3>
-      <h2 class="text-center">
-        You can be your own guiding star with our help!
-      </h2>
-      <div class="button-container d-flex justify-content-center">
-        <button>
-          Get started now
-        </button>
-      </div>
-   </div>
+  <div id="section-certificates-wrapper">
+    <h3 class="text-center">
+      Start today for getting <mark>Online Certification</mark>
+    </h3>
+    <h2 class="text-center">
+      You can be your own guiding star with our help!
+    </h2>
+    <div class="d-flex justify-content-center">
+      <button class="btn btn-success">
+        Get started now
+      </button>
+    </div>
+  </div>
 </template>
 
 <style lang="scss" scoped>
@@ -148,13 +153,14 @@ export default {
 }
 
 // CAROUSEL
-#customCarousel{
+#customCarousel {
   max-width: 60%;
   margin: 0 auto;
 }
 
 .carousel-inner {
-  transition: transform 0.8s ease-in-out; /* Transizione smooth */
+  transition: transform 0.8s ease-in-out;
+  /* Transizione smooth */
 }
 
 .custom-carousel-card {
@@ -165,7 +171,8 @@ export default {
   border: 1px solid lightgray;
   padding: 40px;
   border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Aggiunta ombra */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  /* Aggiunta ombra */
 }
 
 .custom-carousel-card .custom-title {
@@ -219,46 +226,46 @@ export default {
 
 .carousel-control-prev,
 .carousel-control-next {
-  position: absolute; 
+  position: absolute;
   top: 50%;
   transform: translateY(-50%);
 }
 
-.carousel-control-prev{
+.carousel-control-prev {
   left: 15%;
 }
 
-.carousel-control-next{
+.carousel-control-next {
   right: 15%
 }
 
 // SEZIONE CERTIFICATI
-#section-certificates-wrapper{
+#section-certificates-wrapper {
   margin: 0 auto;
   margin-top: 60px;
 }
 
-#section-certificates-wrapper h3{
+#section-certificates-wrapper h3 {
   margin-bottom: 0;
   font-size: 24px;
   font-weight: 700;
   color: #3F3A64;
 }
 
-#section-certificates-wrapper h2{
+#section-certificates-wrapper h2 {
   font-weight: 700;
   font-size: 34px;
   color: #3F3A64;
 }
 
-#section-certificates-wrapper mark{
+#section-certificates-wrapper mark {
   font-weight: 400;
   color: rgb(83, 170, 151);
   margin: 0;
   background-color: transparent;
 }
 
-#section-certificates-wrapper button{
+#section-certificates-wrapper button {
   margin-top: 15px;
   min-height: 52px;
   width: 260px;
@@ -266,12 +273,12 @@ export default {
   color: white;
 }
 
-#section-certificates-wrapper button:hover{
+#section-certificates-wrapper button:hover {
   cursor: pointer;
   background-color: #3F3A64;
 }
 
-#section-certificates-wrapper button:active{
+#section-certificates-wrapper button:active {
   cursor: pointer;
   background-color: rgb(83, 170, 151);
 }
