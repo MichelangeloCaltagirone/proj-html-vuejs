@@ -45,7 +45,7 @@
         <h5 class="text-center mt-5">MAXCOACH AVAILABLE COURSES</h5>
         <h1 class="text-center mb-5">Access <span>Smart Tutoring</span> Program For Benefits.</h1>
 
-        <div class="d-flex justify-content-between">
+        <div class="d-flex justify-content-between row-cols-1 row-cols-md-3">
         <div v-for="(feautere, index) in programBenefits" class="card" style="width: 18rem;">
 
             <img :src="getImageUrl(feautere.picPath)" class="card-img-top img-fluid" :alt="feautere.picPath">
@@ -78,8 +78,7 @@
     color: #8C89A2;
     &:hover {
         color: #20AD96;
-    }
-    
+    }    
 }
 h5 {
     color: #8C89A2;

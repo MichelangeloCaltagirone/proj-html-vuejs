@@ -1,5 +1,5 @@
 <template>
-  <div class="jumbotron text-dark p-5">
+  <div class="jumbotron text-dark p-5 mt-5">
     <div class="container">
       <div class="row align-items-center">
         <div class="col-md-6">
@@ -52,6 +52,16 @@ export default {
 </script>
 
 <style scoped>
+h1 {
+  font-weight: bold;
+  color: #3F3A64;
+}
+
+.lead {
+  font-weight: 400;
+  color: #696969;
+}
+
 .image-wrapper {
   padding: 10px;
   display: inline-block;
