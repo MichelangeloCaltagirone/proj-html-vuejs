@@ -31,9 +31,8 @@ export default {
 
 <template>
     <!-- Contenitore sezione iframe -->
+    <div class="conatiner">
     <section id="section-iframe-wrapper" class="d-flex">
-        <div class="conatiner-fluid">
-
             <div class="left">
                 <!-- Contenitore per iframe video-->
                 <div class="iframe-wrapper">
@@ -81,8 +80,8 @@ export default {
                     </div>
                 </div>
             </div>
+        </section>
         </div>
-    </section>
 </template>
 
 <style lang="scss" scoped>
@@ -151,6 +150,10 @@ mark {
 #section-iframe-wrapper {
     width: 61%;
     margin: 0 auto;
+}
+
+.left{
+    min-width: 61%
 }
 
 .section-iframe-right #right-preTitle {
