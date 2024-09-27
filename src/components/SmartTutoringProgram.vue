@@ -45,7 +45,7 @@
         <h5 class="text-center mt-5">MAXCOACH AVAILABLE COURSES</h5>
         <h1 class="text-center mb-5">Access <span>Smart Tutoring</span> Program For Benefits.</h1>
 
-        <div class="d-flex justify-content-between row-cols-1 row-cols-md-3">
+        <div class="d-flex flex-wrap row-cols-1 row-cols-lg-2">
         <div v-for="(feautere, index) in programBenefits" class="card" style="width: 18rem;">
 
             <img :src="getImageUrl(feautere.picPath)" class="card-img-top img-fluid" :alt="feautere.picPath">
