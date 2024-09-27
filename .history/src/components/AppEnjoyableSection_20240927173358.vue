@@ -76,12 +76,12 @@ export default {
 
         <div class="container py-5">
 
-            <div class="row  gx-5">
+            <div class="row row-cols-3 gx-5">
 
-                <div class="col-md-8 col-xl-4">
+                <div class="col">
                     <div class="c-grey fs-4 mb-2">Enjoyable <span class="c-green">insights</span></div>
 
-                    <div class="fw-bold fs-1 text-nowrap mb-3">Most Viewed <span class="c-green fw-medium fs-1">Best
+                    <div class="fw-bold fs-1 text-nowrap mb-5">Most Viewed <span class="c-green fw-medium fs-1">Best
                             Blogs</span></div>
                     <ul>
                         <li v-for="item in bestBlogs">
@@ -93,7 +93,7 @@ export default {
                     </ul>
                 </div>
 
-                <div class="blog col-md-6 col-xl-4" v-for="(blog, index) in Blogs" :key="index">
+                <div class="blog col" v-for="(blog, index) in Blogs" :key="index">
                     <div class="card">
                         <div class="img-wrapper"></div>
                         <img :src="getImgUrl(blog.image)" class="card-img-top" alt="">
@@ -116,6 +116,7 @@ export default {
             </div>
         </div>
 
+        <div class="fiaf ">Example</div>
     </section>
 </template>
 
@@ -137,7 +138,7 @@ section {
                 text-decoration: none;
                 color: inherit;
                 font-size: 20px;
-                line-height: 2rem;
+                line-height: 3rem;
 
                 &:hover,
                 >*:hover {
