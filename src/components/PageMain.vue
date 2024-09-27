@@ -3,10 +3,9 @@ import OnlineCourses from './AppOnlineCourses.vue';
 import EnjoyableSection from './AppEnjoyableSection.vue';
 import SmartTutoringProgram from './SmartTutoringProgram.vue';
 import IframeVideos from './IframeVideos.vue';
-import DynamicSliderVue from '.DynamicSlider.vue'
+import DynamicSliderVue from './DynamicSlider.vue'
 import SubscribeNewsletter from './subscribeNewsletterSection.vue';
 import OurResults from './OurResults.vue';
-import DynamicSliderVue from './DynamicSlider.vue';
 
     export default {
         data() {
