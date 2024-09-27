@@ -40,19 +40,22 @@ export default {
                 [
 
                     {
-                        title: 'BUSSINES',
-                        previewText: 'Ten Benefits Of Rentals That May Change Your Perspective',
+                        title: 'ARTIST',
+                        image: 'artist-blog-01-480x352.jpg',
+                        previewText: 'Brush Strokes Energize Trees in Paintings',
                         link: '#',
-                        date: 'Dec 28, 2020',
-                        views: '3,459',
+                        date: 'May 15, 2020',
+                        views: 688,
 
                     },
+
                     {
-                        title: 'BUSSINES',
-                        previewText: '10 Things Successful Mompreneurs Do Different',
+                        title: 'ARTIST',
+                        image: 'artist-blog-03-480x352.jpeg',
+                        previewText: 'Pocket-Sized Notebooks Hold Miniature Paintings',
                         link: '#',
-                        date: 'Dec 28, 2020',
-                        views: '3,024',
+                        date: 'May 15, 2020',
+                        views: 603,
 
                     },
 
@@ -61,8 +64,8 @@ export default {
 
     },
     methods: {
-        getImgUrl(index) {
-            return new URL(`../assets/InsectionSectionImages/home-personal-finance-blog-${index}.jpg`, import.meta.url).href
+        getImgUrl(imagePath) {
+            return new URL(`../assets/images/${imagePath}`, import.meta.url).href
         },
     }
 }
@@ -76,12 +79,13 @@ export default {
             <div class="row row-cols-3 gx-5">
 
                 <div class="col">
-                    <span class="text-secondary fs-5">Enjoyable <span class="text-bg-success">insights</span></span>
+                    <span class="text-secondary fs-5">Enjoyable <span class="text-success">insights</span></span>
 
                     <div class="fw-bold fs-3">Most Viewed <span class="text-success">Best Blogs</span></div>
                     <ul class="">
                         <li v-for="item in bestBlogs">
-                            <a class="fs-5 fw-bold" :href="item.link">{{ item.icon }}
+                            <a class="fs-5 fw-bold" :href="item.link">
+                                <i class="fa-solid fa-arrow-right"></i>
                                 <span>{{ item.name }}</span>
                             </a>
                         </li>
@@ -90,12 +94,18 @@ export default {
 
                 <div class="blog col" v-for="(blog, index) in Blogs" :key="index">
                     <div class="card" style="width: 18rem;">
-                        <img :src="getImgUrl(index)" class="card-img-top" alt="">
+                        <img :src="getImgUrl(blog.image)" class="card-img-top" alt="">
                         <div class="card-body d-flex flex-column">
                             <h3>{{ blog.title }}</h3>
                             <p>{{ blog.previewText }}</p>
-                            <span>{{ blog.date }}</span>
-                            <span>{{ blog.views }} views</span>
+                            <span>
+                                <i class="fa-regular fa-calendar"></i>
+                                {{ blog.date }}
+                            </span>
+                            <span>
+                                <i class="fa-solid fa-eye"></i>
+                                {{ blog.views }}
+                            </span>
                         </div>
                     </div>
 
@@ -127,14 +137,11 @@ section {
 
                 &:hover,
                 >*:hover {
-                    color: #198754;
+                    color: #20AD96;
 
                 }
 
 
-                &::before {
-                    content: '\2190';
-                }
             }
         }
     }
