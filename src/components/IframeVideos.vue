@@ -96,12 +96,14 @@ export default {
 
 .iframe-extend{
     height: 475px;
-    width: 845px;
+    min-width: 845px;
+    transition: all 0.5s ease-in-out
 }
 
 iframe,
 img {
     width: 100%;
+    height: 100%
 }
 
 .yt-button {
