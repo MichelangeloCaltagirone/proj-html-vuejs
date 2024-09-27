@@ -1,40 +1,28 @@
 <script>
-import OnlineCourses from './components/AppOnlineCourses.vue';
+
 import PageHeader from './components/PageHeader.vue';
-import EnjoyableSection from './components/AppEnjoyableSection.vue';
-import SmartTutoringProgram from './components/SmartTutoringProgram.vue';
-import IframeVideos from './components/IframeVideos.vue';
-import MainNavBar from './components/MainNavBar.vue';
-import SubscribeNewsletter from './components/subscribeNewsletterSection.vue';
-import OurResults from './components/OurResults.vue';
+import PageMain from './components/PageMain.vue';
+import PageFooter from './components/PageFooter.vue';
+
 
 export default {
+  
   components: {
-    OnlineCourses,
+    
     PageHeader,
-    EnjoyableSection,
-    SmartTutoringProgram,
-    IframeVideos,
-    MainNavBar,
-    SubscribeNewsletter,
-    OurResults,
+    PageMain,
+    PageFooter
+    
   }
 }
 
 </script>
 
 <template>
-  <MainNavBar />
 
   <PageHeader />
-
-  <OnlineCourses />
-  <SmartTutoringProgram />
-  <IframeVideos />
-  <OurResults />
-  <EnjoyableSection />
-  <SubscribeNewsletter />
-
+  <PageMain />
+  <PageFooter />
 
 </template>
 
