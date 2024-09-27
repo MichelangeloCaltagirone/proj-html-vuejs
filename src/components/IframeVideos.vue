@@ -185,16 +185,16 @@ mark{
     color: rgb(116, 116, 116);
 }
 
-a{
-    text-decoration: none;
-}
-
 #right-link-wrapper a p{
     padding-bottom: 1px;
     font-weight: 700;
     color: rgb(83, 170, 150);
     border-bottom: 1px solid rgb(83, 170, 150);
     width: fit-content;
+}
+
+a{
+    text-decoration: none;
 }
 
 #right-link-wrapper a p:hover{
@@ -212,5 +212,4 @@ a{
     z-index: 1001;
 }
 </style>
-
 <!-- MADE BY ANDREA GULLI -->

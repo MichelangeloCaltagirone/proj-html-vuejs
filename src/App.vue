@@ -6,6 +6,7 @@ import EnjoyableSection from './components/AppEnjoyableSection.vue';
 import SmartTutoringProgram from './components/SmartTutoringProgram.vue';
 import IframeVideos from './components/IframeVideos.vue';
 import MainNavBar from './components/MainNavBar.vue';
+import SubscribeNewsletter from './components/subscribeNewsletterSection.vue';
 
 export default {
   components: {
@@ -15,32 +16,24 @@ export default {
     Jumbotron,
     SmartTutoringProgram,
     IframeVideos,
-    MainNavBar
+    MainNavBar,
+    SubscribeNewsletter
   }
 }
 
 </script>
 
 <template>
-<<<<<<< HEAD
-  <PageHeader :menuItems="menuItems" />
-  <Jumbotron />
-=======
-
   <MainNavBar />
   <div>
     <PageHeader :menuItems="menuItems" />
-    <Jumbotron title="Distant learning for further expansion"
-      subtitle="Learning is a life-long journey that in fact we never find the terminate stop. Stop searching, enjoy the process."
-      buttonText="Download free guide" />
-
+    <Jumbotron />
   </div>
->>>>>>> origin/OnlineCourses-+-SmartTutoringProgram
   <OnlineCourses />
   <SmartTutoringProgram />
   <IframeVideos />
   <EnjoyableSection />
-
+  <SubscribeNewsletter />
 
 
 </template>
