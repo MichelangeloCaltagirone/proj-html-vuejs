@@ -1,5 +1,6 @@
 <template>
   <header>
+    <MainNavBar />
     <nav class="navbar navbar-expand-lg navbar-light p-3">
       <div class="container">
         <!-- Logo -->
@@ -107,12 +108,14 @@
 // Importa il componente Jumbotron e SideBar
 import Jumbotron from './Jumbotron.vue';
 import Sidebar from './SideBar.vue';
+import MainNavBar from './MainNavBar.vue';
 
 export default {
   name: 'PageHeader',
   components: {
     Jumbotron, // Registrazione del componente Jumbotron
     Sidebar, // Registrazione del componente SideBar
+    MainNavBar // Registrazione del componente MainNavBar
   },
   data() {
     return {
