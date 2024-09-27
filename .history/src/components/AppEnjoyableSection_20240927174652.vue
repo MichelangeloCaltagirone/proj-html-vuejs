@@ -76,7 +76,7 @@ export default {
 
         <div class="container py-5">
 
-            <div class="row gx-5 gy-sm-5">
+            <div class="row gx-5 gy-5">
 
                 <div class="col-sm-12 col-md-8 col-xl-4">
                     <div class="c-grey fs-4 mb-2">Enjoyable <span class="c-green">insights</span></div>
