@@ -9,21 +9,17 @@ export default {
 </script>
 
 <template>
-   <section class="py-5 my-5 m-auto text-center">
+    <section class="py-5 my-5 m-auto text-center">
 
-        <section class="py-5 my-5 w-75 m-auto fs-3">
-           
+        <div class="container">
 
-            <div class="container">
+            <div class="row justify-content-center align-items-center">
 
-                <div class="row justify-content-center align-items-center">
-
-                    <div class="col-lg-8 mb-4">
-                        <h2 class="fw-bold fs-1 my-4">Subscribe to <span class="c-green fw-medium">Newsletters</span>
-                        </h2>
-                        <p class="c-grey fs-5">Enter your email address to register for our newsletter, delivered on a
-                            regular basis!</p>
-                     </div>
+                <div class="col-lg-8 mb-4">
+                    <h2 class="fw-bold fs-1 my-4">Subscribe to <span class="c-green fw-medium">Newsletters</span></h2>
+                    <p class="c-grey fs-5">Enter your email address to register for our newsletter, delivered on a
+                        regular basis!</p>
+                </div>
 
                 <div class="col-lg-5">
                     <div class="input-group input-group-lg mb-3">
@@ -33,38 +29,13 @@ export default {
                             <label for="SubscribeNewsletter">Enter your email</label>
                         </div>
                         <button class="btn btn-lg input-group-text bg-green text-white">Subscribe</button>
-                    
-                        <div class="col text-center">
-
-                            <div class="fw-bold fs-1 my-5">Subscribe <span class="c-green fw-medium">Newsletters</span>
-                            </div>
-                            <p class="c-grey fs-3 text-wrap mb-5 fw-semibold">Enter your email address to register to
-                                our
-                                newsletter
-                                subscription
-                                delivered on a regular basis!</p>
-                        </div>
-
-                        <div class="col">
-
-                            <div class="input-group mb-3">
-                                <div class="form-floating c-grey text-center email-bar">
-                                    <input type="email" class="form-control bg-grey border border-0"
-                                        id="SubscribeNewsletter" placeholder="Enter your email">
-                                    <label for="SubscribeNewsletter">Enter your email</label>
-                                </div>
-                                <button class="btn btn-lg input-group-text bg-green text-light fs-4 fw-semibold">Confirm
-                                    identity</button>
-                            </div>
-                        </div>
                     </div>
-
                 </div>
             </div>
-            </div>
 
-        </section>
-   </section>
+        </div>
+
+    </section>
 </template>
 
 <style lang="scss" scoped>
