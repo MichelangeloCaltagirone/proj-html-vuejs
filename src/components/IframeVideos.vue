@@ -155,7 +155,12 @@ mark {
 }
 
 .left{
+    flex-shrink: 1;
     min-width: 61%
+}
+
+.right{
+    flex-grow: 0;
 }
 
 .section-iframe-right #right-preTitle {
