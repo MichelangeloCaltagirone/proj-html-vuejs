@@ -217,6 +217,21 @@ export default {
   margin-bottom: 0;
 }
 
+.carousel-control-prev,
+.carousel-control-next {
+  position: absolute; 
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.carousel-control-prev{
+  left: 15%;
+}
+
+.carousel-control-next{
+  right: 15%
+}
+
 // SEZIONE CERTIFICATI
 #section-certificates-wrapper{
   margin: 0 auto;
