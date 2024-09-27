@@ -145,10 +145,20 @@ section {
 
                 }
 
+            }
 
+            .col {
+
+                .card {
+                    height: 400px;
+                    width: 250px;
+                }
             }
         }
+
+
     }
+
 
     .c-grey {
         color: #8C89A2;
