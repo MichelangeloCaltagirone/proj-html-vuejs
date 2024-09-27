@@ -72,7 +72,7 @@ import OnlineCoursesCard from './OnlineCoursesCard.vue';
         </div>
         
         <div class="d-flex justify-content-center my-4">
-            <button type="button" class="btn btn-large mx-auto">View all courses<i class="fa-solid fa-arrow-right-long"></i></button>
+            <button type="button" class="btn btn-large mx-auto">View all courses<i class="fa-solid fa-arrow-right-long ps-1"></i></button>
         </div>
     </div>
 
@@ -90,7 +90,7 @@ import OnlineCoursesCard from './OnlineCoursesCard.vue';
         padding: 15px 45px;
         background-color: #20AD96;
         color: white;
-        font-size: 12px;
+        font-size: 14px;
         font-weight: bold;
 }
 h5 {
