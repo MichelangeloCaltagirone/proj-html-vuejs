@@ -29,7 +29,7 @@
       <!-- Immagini in fila -->
       <div class="container mt-5">
         <div class="row text-center d-flex justify-content-between">
-          <div class="col-md-2" v-for="n in 6" :key="n">
+          <div class="col-md-2 col-4" v-for="n in 6" :key="n">
             <img :src="`src/assets/images/client-logo-0${n}.png`" class="img-fluid" alt="Image">
           </div>
         </div>
