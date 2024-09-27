@@ -31,7 +31,7 @@ export default {
 
 <template>
     <!-- Contenitore sezione iframe -->
-    <div class="conatiner">
+    <div class="conatiner" style="margin-top:70px">
     <section id="section-iframe-wrapper" class="d-flex">
             <div class="left">
                 <!-- Contenitore per iframe video-->
@@ -94,9 +94,9 @@ export default {
     position: relative;
 }
 
-.iframe-extend {
-    max-height: 475px;
-    max-width: 845px;
+.iframe-extend{
+    height: 475px;
+    width: 845px;
 }
 
 iframe,
