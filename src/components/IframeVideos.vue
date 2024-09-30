@@ -13,7 +13,6 @@ export default {
             this.cover = false
             this.isVideoPlaying = true;
 
-            document.body.classList.add('video-playing-mode') // Classe per applicare uno sfondo nero e coprire tutti gli elementi nel body quando il video è i riproduzione
             const iframe = document.querySelector('.iframe-wrapper')
             iframe.classList.add('iframe-extend') // aggiungo la classe per estendere l'iframe una volta cliccato
         },
@@ -21,7 +20,6 @@ export default {
             this.showVideo = false
             this.cover = true
 
-            document.body.classList.remove('video-playing-mode')
             const iframe = document.querySelector('.iframe-wrapper')
             iframe.classList.remove('iframe-extend') // aggiungo la classe per rimuovere l'iframe una volta cliccato          
         },
